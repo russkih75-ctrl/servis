@@ -1,17 +1,20 @@
 # servis
 
-Репозиторий проекта. Работа из Cursor (desktop или web) через GitHub.
+Репозиторий: **https://github.com/russkih75-ctrl/servis**
 
-## Как открыть в Cursor Web
+Работа из Cursor (desktop или web) через GitHub.
 
-1. Зайдите на [cursor.com](https://cursor.com) и войдите в аккаунт.
-2. **Open from GitHub** → выберите этот репозиторий.
-3. Редактируйте код в браузере; изменения коммитятся в этот репозиторий.
+## Подключение к Cursor Web
+
+1. Откройте [cursor.com](https://cursor.com) и войдите в аккаунт.
+2. Нажмите **Open from GitHub** (или **Clone / Open**).
+3. Выберите репозиторий `russkih75-ctrl/servis` или вставьте ссылку: `https://github.com/russkih75-ctrl/servis`.
+4. Редактируйте код в браузере; коммиты и push идут в этот репозиторий — можно работать полностью из веб-версии.
 
 ## Локальная работа
 
 ```bash
-git clone https://github.com/<ваш-username>/servis.git
+git clone https://github.com/russkih75-ctrl/servis.git
 cd servis
 ```
 
