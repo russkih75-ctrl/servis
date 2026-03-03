@@ -1,21 +1,27 @@
 # servis
 
-Репозиторий: **https://github.com/russkih75-ctrl/servis**
+**Репозиторий:** https://github.com/russkih75-ctrl/servis
 
-Работа из Cursor (desktop или web) через GitHub.
+Один репозиторий — работа и в Cursor Web, и в десктопе. Всё синхронизируется через GitHub.
 
-## Подключение к Cursor Web
+---
 
-1. Откройте [cursor.com](https://cursor.com) и войдите в аккаунт.
-2. Нажмите **Open from GitHub** (или **Clone / Open**).
-3. Выберите репозиторий `russkih75-ctrl/servis` или вставьте ссылку: `https://github.com/russkih75-ctrl/servis`.
-4. Редактируйте код в браузере; коммиты и push идут в этот репозиторий — можно работать полностью из веб-версии.
+## Запуск веб-версии (всё уже настроено)
 
-## Локальная работа
+1. Откройте **https://cursor.com** и войдите в аккаунт.
+2. Нажмите **Clone from GitHub** (или **Open from GitHub**).
+3. Выберите репозиторий **russkih75-ctrl/servis** и откройте его.
+4. Редактируйте код в браузере. Сохраняйте → делайте коммиты и push как в обычном Cursor — всё хранится в этом репозитории.
+
+Настройки редактора (`.vscode/settings.json`) и структура проекта уже в репо — в веб-версии всё подхватится автоматически.
+
+---
+
+## Локально (если нужен десктоп)
 
 ```bash
 git clone https://github.com/russkih75-ctrl/servis.git
 cd servis
 ```
 
-После изменений: `git add .` → `git commit -m "..."` → `git push`.
+Дальше: `git add .` → `git commit -m "..."` → `git push`. Можно работать и в Cursor Web, и в десктопе с одного репо.

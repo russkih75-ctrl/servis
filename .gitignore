@@ -15,9 +15,8 @@ build/
 *.log
 .cache/
 
-# IDE & OS
+# IDE & OS ( .vscode/settings.json коммитим для Cursor Web )
 .idea/
-.vscode/
 *.swp
 .DS_Store
 Thumbs.db
