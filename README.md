@@ -25,3 +25,14 @@ cd servis
 ```
 
 Дальше: `git add .` → `git commit -m "..."` → `git push`. Можно работать и в Cursor Web, и в десктопе с одного репо.
+
+---
+
+## Облачной агент (Cloud Agent)
+
+Окружение для облака уже задано в репо (`.cursor/environment.json` + `AGENTS.md`).
+
+1. **Один раз:** [cursor.com/onboard](https://cursor.com/onboard) → подключите GitHub и репозиторий **russkih75-ctrl/servis**.
+2. **Каждый раз:** в чате агента выберите в выпадающем списке **«Cloud»** и отправьте задачу.
+
+Подробно: [docs/CLOUD-AGENT.md](docs/CLOUD-AGENT.md).
