@@ -3,69 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>7 Законов Успеха — 2 500 лет данных</title>
+<title>7 Законов Успеха — 2 500 лет · Биология · Война · Наука</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#07070c;--sf:#0f0f17;--cd:#15151f;--bd:#222236;--tx:#ebebf5;--mt:#6e6e96;--ac:#8b5cf6;--a2:#d946ef;--gn:#22c55e;--rd:#ef4444;--yl:#eab308;--cn:#06b6d4;--or:#f97316;--gr:linear-gradient(135deg,#8b5cf6,#d946ef,#ec4899);--fn:system-ui,-apple-system,sans-serif}
-html{font-size:16px}body{font-family:var(--fn);background:var(--bg);color:var(--tx);overflow:hidden;height:100vh}
+:root{--bg:#06060b;--sf:#0d0d15;--cd:#13131d;--bd:#1f1f32;--tx:#eeeef8;--mt:#6a6a92;--ac:#8b5cf6;--a2:#d946ef;--gn:#22c55e;--rd:#ef4444;--yl:#eab308;--cn:#06b6d4;--or:#f97316;--gr:linear-gradient(135deg,#8b5cf6,#d946ef,#ec4899);--fn:system-ui,-apple-system,sans-serif}
+body{font-family:var(--fn);background:var(--bg);color:var(--tx);overflow:hidden;height:100vh}
 .dk{position:relative;width:100%;height:100vh}
-.s{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:clamp(1.5rem,4vw,5rem);opacity:0;visibility:hidden;transform:translateY(24px);transition:all .45s cubic-bezier(.4,0,.2,1);overflow-y:auto}
+.s{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:clamp(1.2rem,3.5vw,4.5rem);opacity:0;visibility:hidden;transform:translateY(20px);transition:all .4s cubic-bezier(.4,0,.2,1);overflow-y:auto}
 .s.on{opacity:1;visibility:visible;transform:translateY(0)}
-.w{max-width:1060px;width:100%}
-h1{font-size:clamp(2rem,5vw,4.2rem);font-weight:900;line-height:1.05;letter-spacing:-.03em;margin-bottom:1rem}
-h2{font-size:clamp(1.5rem,3vw,2.6rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:.8rem}
-h3{font-size:clamp(.9rem,1.4vw,1.2rem);font-weight:700;margin-bottom:.4rem}
-p{font-size:clamp(.85rem,1.1vw,1.05rem);line-height:1.55;color:var(--mt);max-width:680px}
+.w{max-width:1020px;width:100%}
+h1{font-size:clamp(1.9rem,4.5vw,3.8rem);font-weight:900;line-height:1.05;letter-spacing:-.03em;margin-bottom:.8rem}
+h2{font-size:clamp(1.4rem,2.8vw,2.4rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:.7rem}
+h3{font-size:clamp(.85rem,1.3vw,1.1rem);font-weight:700;margin-bottom:.3rem}
+p{font-size:clamp(.8rem,1vw,1rem);line-height:1.5;color:var(--mt);max-width:650px}
 .gt{background:var(--gr);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .ac{color:var(--ac)}.gn{color:var(--gn)}.rd{color:var(--rd)}.yl{color:var(--yl)}.cn{color:var(--cn)}.or{color:var(--or)}
-.bn{font-size:clamp(3rem,8vw,7rem);font-weight:900;line-height:1;letter-spacing:-.04em}
-.mn{font-size:clamp(1.8rem,3.5vw,3.5rem);font-weight:900;line-height:1}
-.tg{display:inline-block;padding:.25rem .7rem;border-radius:100px;font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.07em;border:1px solid var(--bd);color:var(--mt);margin-bottom:.8rem}
+.bn{font-size:clamp(2.8rem,7vw,6rem);font-weight:900;line-height:1;letter-spacing:-.04em}
+.mn{font-size:clamp(1.6rem,3vw,3rem);font-weight:900;line-height:1}
+.tg{display:inline-block;padding:.2rem .6rem;border-radius:100px;font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;border:1px solid var(--bd);color:var(--mt);margin-bottom:.7rem}
 .ta{border-color:var(--ac);color:var(--ac)}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.2rem}
-.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin-top:1.2rem}
-.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:.7rem;margin-top:1.2rem}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:1rem}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1rem}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-top:1rem}
 @media(max-width:768px){.g2,.g3,.g4{grid-template-columns:1fr}}
-.c{background:var(--cd);border:1px solid var(--bd);border-radius:12px;padding:1.2rem;transition:border-color .3s}
+.c{background:var(--cd);border:1px solid var(--bd);border-radius:11px;padding:1.1rem;transition:border-color .3s}
 .c:hover{border-color:var(--ac)}
-.c h3{font-size:.9rem;margin-bottom:.3rem}.c p{font-size:.82rem;line-height:1.4}
-.c .n{font-size:2rem;font-weight:900;margin-bottom:.3rem}
-.br{margin-top:1.2rem;width:100%;max-width:600px}
-.br-r{display:flex;align-items:center;margin-bottom:.5rem;gap:.7rem}
-.br-l{min-width:150px;font-size:.8rem;font-weight:500;text-align:right}
-.br-t{flex:1;height:28px;background:var(--sf);border-radius:5px;overflow:hidden}
-.br-f{height:100%;border-radius:5px;display:flex;align-items:center;padding-left:8px;font-weight:700;font-size:.75rem;transition:width 1s cubic-bezier(.4,0,.2,1);width:0}
-.s.on .br-f{width:var(--w)}
-.q{font-size:clamp(1rem,1.6vw,1.5rem);font-weight:500;font-style:italic;line-height:1.45;padding-left:1.2rem;border-left:3px solid var(--ac);max-width:700px}
-.qa{margin-top:.6rem;font-size:.85rem;font-style:normal;color:var(--mt)}
-.st{display:flex;flex-direction:column;gap:.5rem;margin-top:1rem;counter-reset:s}
-.si{display:flex;align-items:flex-start;gap:.8rem;padding:.7rem 1rem;background:var(--cd);border-radius:9px;border:1px solid var(--bd);counter-increment:s}
-.si::before{content:counter(s);min-width:28px;height:28px;display:flex;align-items:center;justify-content:center;background:var(--ac);color:#fff;border-radius:7px;font-weight:800;font-size:.8rem;flex-shrink:0}
-.si h3{font-size:.88rem;margin-bottom:.1rem}.si p{font-size:.78rem;color:var(--mt);line-height:1.3}
-table{width:100%;border-collapse:separate;border-spacing:0;margin-top:1rem;font-size:.8rem}
-th{text-align:left;padding:.5rem .7rem;background:var(--cd);color:var(--mt);font-weight:600;font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--bd)}
-th:first-child{border-radius:8px 0 0 0}th:last-child{border-radius:0 8px 0 0}
-td{padding:.5rem .7rem;border-bottom:1px solid var(--bd);vertical-align:top}
+.c h3{font-size:.85rem;margin-bottom:.2rem}.c p{font-size:.78rem;line-height:1.35}
+.c .n{font-size:1.8rem;font-weight:900;margin-bottom:.2rem}
+.q{font-size:clamp(.95rem,1.5vw,1.35rem);font-weight:500;font-style:italic;line-height:1.4;padding-left:1rem;border-left:3px solid var(--ac);max-width:650px}
+.qa{margin-top:.5rem;font-size:.8rem;font-style:normal;color:var(--mt)}
+.st{display:flex;flex-direction:column;gap:.4rem;margin-top:.9rem;counter-reset:s}
+.si{display:flex;align-items:flex-start;gap:.7rem;padding:.6rem .9rem;background:var(--cd);border-radius:8px;border:1px solid var(--bd);counter-increment:s}
+.si::before{content:counter(s);min-width:26px;height:26px;display:flex;align-items:center;justify-content:center;background:var(--ac);color:#fff;border-radius:6px;font-weight:800;font-size:.75rem;flex-shrink:0}
+.si h3{font-size:.82rem;margin-bottom:.1rem}.si p{font-size:.73rem;color:var(--mt);line-height:1.25}
+table{width:100%;border-collapse:separate;border-spacing:0;margin-top:.9rem;font-size:.76rem}
+th{text-align:left;padding:.45rem .6rem;background:var(--cd);color:var(--mt);font-weight:600;font-size:.65rem;text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--bd)}
+th:first-child{border-radius:7px 0 0 0}th:last-child{border-radius:0 7px 0 0}
+td{padding:.45rem .6rem;border-bottom:1px solid var(--bd);vertical-align:top}
 tr:last-child td{border-bottom:none}
+.ins{background:linear-gradient(135deg,rgba(139,92,246,.07),rgba(217,70,239,.07));border:1px solid rgba(139,92,246,.2);border-radius:10px;padding:1.1rem;margin-top:.7rem}
+.ins p{color:var(--tx);font-size:.88rem;line-height:1.4;max-width:none}
+.ins strong{color:var(--ac)}
 .sp{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
 @media(max-width:900px){.sp{grid-template-columns:1fr}}
-.tl{position:relative;padding-left:1.8rem;margin-top:1.2rem}
-.tl::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:var(--bd)}
-.ti{position:relative;margin-bottom:1rem;padding-left:1rem}
-.ti::before{content:'';position:absolute;left:-1.8rem;top:.25rem;width:14px;height:14px;border-radius:50%;background:var(--ac);border:2px solid var(--bg)}
-.ti h3{font-size:.85rem;margin-bottom:.1rem}.ti .yr{font-size:.72rem;color:var(--ac);font-weight:700}.ti p{font-size:.78rem;color:var(--mt)}
-.ins{background:linear-gradient(135deg,rgba(139,92,246,.08),rgba(217,70,239,.08));border:1px solid rgba(139,92,246,.25);border-radius:12px;padding:1.4rem;margin-top:.8rem}
-.ins p{color:var(--tx);font-size:.95rem;line-height:1.5;max-width:none}
-.ins strong{color:var(--ac)}
-.nav{position:fixed;bottom:1.2rem;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:.7rem;z-index:100;background:rgba(15,15,23,.94);backdrop-filter:blur(14px);padding:.4rem .9rem;border-radius:100px;border:1px solid var(--bd)}
-.nav button{width:32px;height:32px;border:none;background:var(--cd);color:var(--tx);border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.9rem;transition:background .2s}
+.nav{position:fixed;bottom:1rem;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:.6rem;z-index:100;background:rgba(13,13,21,.95);backdrop-filter:blur(12px);padding:.35rem .8rem;border-radius:100px;border:1px solid var(--bd)}
+.nav button{width:30px;height:30px;border:none;background:var(--cd);color:var(--tx);border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.85rem;transition:background .2s}
 .nav button:hover{background:var(--ac)}
-.nav .ct{font-size:.75rem;color:var(--mt);min-width:48px;text-align:center}
-.pg{position:fixed;top:0;left:0;height:3px;background:var(--gr);z-index:200;transition:width .35s}
-.fu{opacity:0;transform:translateY(16px);transition:opacity .4s,transform .4s}.s.on .fu{opacity:1;transform:translateY(0)}
-.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
-.dl{position:fixed;top:1rem;right:1rem;z-index:200;padding:.5rem 1rem;background:var(--ac);color:#fff;border:none;border-radius:7px;font-weight:600;font-size:.75rem;cursor:pointer;font-family:inherit;transition:transform .2s}
-.dl:hover{transform:translateY(-2px)}
+.nav .ct{font-size:.7rem;color:var(--mt);min-width:44px;text-align:center}
+.pg{position:fixed;top:0;left:0;height:3px;background:var(--gr);z-index:200;transition:width .3s}
+.fu{opacity:0;transform:translateY(14px);transition:opacity .35s,transform .35s}.s.on .fu{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
+.dl{position:fixed;top:.8rem;right:.8rem;z-index:200;padding:.4rem .9rem;background:var(--ac);color:#fff;border:none;border-radius:6px;font-weight:600;font-size:.7rem;cursor:pointer;font-family:inherit;transition:transform .15s}
+.dl:hover{transform:translateY(-1px)}
 </style>
 </head>
 <body>
@@ -73,332 +62,292 @@ tr:last-child td{border-bottom:none}
 <button class="dl" onclick="dl()">⬇ Скачать</button>
 <div class="dk" id="dk">
 
-<!-- 1 -->
+<!-- 1 TITLE -->
 <div class="s on"><div class="w" style="text-align:center">
-<div class="tg ta fu">2 500 лет данных · 2026</div>
+<div class="tg ta fu">Война · Биология · Наука · Философия · 2 500 лет</div>
 <h1 class="fu d1"><span class="gt">7 Законов</span><br>которые решают всё</h1>
-<p class="fu d2" style="margin:0 auto 1.2rem">Не про стартапы. Про закономерности, которые работают ВЕЗДЕ:<br>империи, компании, армии, спортсмены, учёные.</p>
-<p class="fu d3" style="margin:0 auto;font-size:.8rem;color:var(--mt)">Сунь Цзы · Марк Аврелий · Наполеон · Kahneman (Нобель) · Thaler (Нобель) · Acemoglu (Нобель)<br>Collins (1 435 компаний) · Munger · Dalio · Senge · Granovetter · Toyota · SpaceX</p>
+<p class="fu d2" style="margin:0 auto .8rem">Закономерности, работающие ВЕЗДЕ: империи, природа, армии, компании, учёные.<br>3 Нобелевских лауреата · Collins (1 435 компаний) · Nature · 450 млн лет эволюции грибов.</p>
+<p class="fu d3" style="margin:0 auto;font-size:.72rem">Суворов · Сунь Цзы · Марк Аврелий · Наполеон · Toyota · SpaceX · Amazon · Wildberries<br>Kahneman · Thaler · Acemoglu · Мангер · Dalio · Грановеттер · Meadows</p>
 </div></div>
 
-<!-- 2 -->
+<!-- 2 COMPOUND -->
 <div class="s"><div class="w" style="text-align:center">
-<div class="tg fu">Критика · Честность</div>
-<h2 class="fu d1"><span class="rd">Что было неправильно</span> в предыдущем исследовании</h2>
-<div class="g3 fu d2">
-<div class="c"><h3>❌ Telegram = аксиома</h3><p>Один кейс ≠ закон. Survivorship bias.</p></div>
-<div class="c"><h3>❌ 14 шагов = рецепт</h3><p>Фреймворки — инструменты мышления, не рецепты.</p></div>
-<div class="c"><h3>❌ 100% гарантия</h3><p>Не существует. Есть закономерности, максимизирующие вероятность.</p></div>
-</div>
-<div class="ins fu d3"><p>Исправление: ищем паттерны через ВСЕ успешные системы за 2 500 лет. Не «как победить», а <strong>«что гарантированно приведёт к провалу»</strong> — и убираем это (Мангер: инвертируй).</p></div>
-</div></div>
-
-<!-- 3 -->
-<div class="s"><div class="w" style="text-align:center">
-<div class="tg ta fu">Закон 1 · Математика</div>
+<div class="tg ta fu">Закон 1 · Математика · Биология · Бизнес</div>
 <h2 class="fu d1">1% в день × 365 дней =</h2>
 <div class="bn gt fu d2">38x</div>
-<p class="fu d3" style="margin:1rem auto 0">Не мотивация. МАТЕМАТИКА. 1.01³⁶⁵ = 37.78. Работает для денег, навыков, связей, знаний.</p>
-<p class="fu d4" style="margin:.5rem auto 0;color:var(--rd)">А 1% хуже каждый день? 0.99³⁶⁵ = 0.03. Ты потеряешь 97%.</p>
+<p class="fu d3" style="margin:.8rem auto 0">Это не мотивация. Это экспоненциальная функция. 1.01³⁶⁵ = 37.78</p>
+<p class="fu d4" style="margin:.3rem auto 0;color:var(--rd)">-1% в день = потеря 97% за год. Разница: 1 266 раз.</p>
 </div></div>
 
-<!-- 4 -->
+<!-- 3 COMPOUND EXAMPLES -->
 <div class="s"><div class="w">
-<div class="tg fu">Compound Effect · 2 500 лет доказательств</div>
+<div class="tg fu">Compound Effect везде</div>
 <h2 class="fu d1"><span class="gt">Маленькое × Постоянно</span> = Огромное</h2>
-<div class="g2 fu d2">
-<div class="c"><h3>🏭 Toyota</h3><p>Кайдзен: маленькие улучшения каждый день → №1 в мировом автопроме за 50 лет</p></div>
-<div class="c"><h3>💰 Buffett</h3><p>99% его $100B+ заработано ПОСЛЕ 65 лет. Сложный процент на 60 лет</p></div>
-<div class="c"><h3>📦 Amazon</h3><p>«Day 1»: бесконечные маленькие улучшения клиентского опыта → $2T</p></div>
-<div class="c"><h3>🏛️ Рим</h3><p>Дорожная сеть строилась веками → контроль континента на 1000 лет</p></div>
-</div>
-<div class="ins fu d3"><p><strong>Инсайт:</strong> Большинство бросает через 3 месяца — улучшения ещё невидимы. Это «плато скрытого потенциала». Те, кто проходит его — получают экспоненциальный рост.</p></div>
-</div></div>
-
-<!-- 5 -->
-<div class="s"><div class="w" style="text-align:center">
-<div class="tg ta fu">Закон 2 · 2 500 лет</div>
-<h1 class="fu d1"><span class="gt">Фокус</span></h1>
-<h2 class="fu d2">Вся сила в одну точку</h2>
-<div class="q fu d3" style="margin:1.5rem auto 0;text-align:left">Наполеон побеждал армии вдвое больше, потому что концентрировал ВСЮ силу в одном месте прорыва.<div class="qa">Клаузевиц · 9 принципов войны</div></div>
-</div></div>
-
-<!-- 6 -->
-<div class="s"><div class="w">
-<div class="tg fu">Collins · 1 435 компаний · 30 лет исследований</div>
-<h2 class="fu d1">Концепция <span class="gt">Ежа</span></h2>
-<p class="fu d1">Компании-«ежи» обыграли рынок в <strong style="color:var(--gn)">6.9 раз</strong> за 15 лет.</p>
 <div class="g3 fu d2">
-<div class="c" style="text-align:center;border-color:var(--ac)"><div style="font-size:1.8rem;margin-bottom:.3rem">🔥</div><h3>Страсть</h3><p>Что ты ДЕЙСТВИТЕЛЬНО любишь делать?</p></div>
-<div class="c" style="text-align:center;border-color:var(--gn)"><div style="font-size:1.8rem;margin-bottom:.3rem">🏆</div><h3>Лучший в мире</h3><p>В чём ты можешь стать №1?</p></div>
-<div class="c" style="text-align:center;border-color:var(--yl)"><div style="font-size:1.8rem;margin-bottom:.3rem">💰</div><h3>Экономический двигатель</h3><p>Что приносит деньги?</p></div>
+<div class="c"><h3>🏭 Toyota · Кайдзен</h3><p>Маленькие улучшения каждый день → №1 автопром мира за 50 лет</p></div>
+<div class="c"><h3>💰 Buffett</h3><p>99% из $100B+ заработано ПОСЛЕ 65 лет. Сложный процент 60 лет</p></div>
+<div class="c"><h3>🌿 Коралловый риф</h3><p>Полипы по 1мм/год → Большой Барьерный Риф 2 300 км. 20 000 лет</p></div>
+<div class="c"><h3>🛒 Wildberries</h3><p>Бакальчук: из квартиры в декрете → $50B оборот. 20 лет compound</p></div>
+<div class="c"><h3>🏛️ Рим</h3><p>Дороги строились веками → контроль континента 1000 лет</p></div>
+<div class="c"><h3>🧬 ДНК</h3><p>Микромутации × 3.5 млрд лет = всё живое на Земле</p></div>
 </div>
-<div class="ins fu d3"><p><strong>Инсайт:</strong> На пересечении трёх кругов — твоё «одно дело». Фокусируйся ТОЛЬКО на нём. «Лисы» знают много. «Ежи» знают ОДНУ БОЛЬШУЮ вещь — и побеждают.</p></div>
 </div></div>
 
-<!-- 7 -->
+<!-- 4 FOCUS -->
 <div class="s"><div class="w" style="text-align:center">
-<div class="tg ta fu">Закон 3 · Бойд · Toyota · SpaceX</div>
+<div class="tg ta fu">Закон 2 · Суворов · Наполеон · Collins</div>
+<h1 class="fu d1"><span class="gt">Фокус</span></h1>
+<div class="q fu d2" style="margin:1rem auto;text-align:left">Глазомер, быстрота, натиск. Одна минута решает исход битвы, один час — успех кампании.<div class="qa">Александр Суворов · 63 победы, 0 поражений</div></div>
+<p class="fu d3" style="margin:.5rem auto 0">Вся сила в ОДНУ точку. Распыление = гарантированное поражение.</p>
+</div></div>
+
+<!-- 5 FOCUS NATURE + BUSINESS -->
+<div class="s"><div class="w">
+<div class="tg fu">Фокус в природе и бизнесе</div>
+<h2 class="fu d1">Концентрация <span class="gt">везде</span></h2>
+<div class="g2 fu d2">
+<div class="c" style="border-color:var(--gn)"><h3>🦅 Хищник</h3><p>Орёл не гоняется за 10 зайцами. Он выбирает ОДНУ жертву и пикирует со 100% фокусом.</p></div>
+<div class="c" style="border-color:var(--ac)"><h3>⚔️ Суворов</h3><p>Глазомер: оцени ситуацию мгновенно. Быстрота: действуй немедленно. Натиск: бей в одну точку.</p></div>
+<div class="c" style="border-color:var(--yl)"><h3>🦔 Ёж Collins</h3><p>1 435 компаний за 30 лет: «Ежи» (1 дело, но лучше всех) обыграли рынок в 6.9 раз.</p></div>
+<div class="c" style="border-color:var(--or)"><h3>🍎 Apple</h3><p>Jobs вернулся и убрал 70% продуктов. Оставил 4. Результат: самая дорогая компания мира.</p></div>
+</div>
+<div class="ins fu d3"><p><strong>Инсайт:</strong> Ты проигрываешь не потому что не знаешь что делать. А потому что делаешь <strong>слишком много.</strong></p></div>
+</div></div>
+
+<!-- 6 FEEDBACK -->
+<div class="s"><div class="w" style="text-align:center">
+<div class="tg ta fu">Закон 3 · OODA · PDCA · Эволюция</div>
 <h1 class="fu d1"><span class="gt">Обратная связь</span></h1>
 <h2 class="fu d2">Кто быстрее проходит цикл — побеждает</h2>
 <div class="g3 fu d3">
-<div class="c" style="text-align:center;border-color:var(--or)"><h3>🎯 OODA (Бойд)</h3><p>Наблюдай → Оценивай → Решай → Действуй<br><small class="ac">Побеждал за 40 секунд</small></p></div>
-<div class="c" style="text-align:center;border-color:var(--cn)"><h3>🔄 PDCA (Деминг)</h3><p>Plan → Do → Check → Act<br><small class="cn">Революция Toyota</small></p></div>
-<div class="c" style="text-align:center;border-color:var(--gn)"><h3>🧪 Lean (Ries)</h3><p>Build → Measure → Learn<br><small class="gn">Стартап-метод</small></p></div>
+<div class="c" style="text-align:center"><h3>⚡ Бойд «40 сек»</h3><p>Побеждал любого лётчика за 40 секунд: OODA быстрее противника</p></div>
+<div class="c" style="text-align:center"><h3>🚀 SpaceX</h3><p>4 взрыва ракеты → учись → повтори → посадка. Каждый взрыв = урок</p></div>
+<div class="c" style="text-align:center"><h3>🧬 Эволюция</h3><p>Мутация → отбор → адаптация. 3.5 миллиарда лет. Самый мощный алгоритм</p></div>
 </div>
 </div></div>
 
-<!-- 8 -->
+<!-- 7 BIOLOGY NETWORKS -->
 <div class="s"><div class="w">
-<div class="tg fu">3.5 миллиарда лет доказательств</div>
-<h2 class="fu d1">Обратная связь <span class="gt">везде</span></h2>
-<table class="fu d2">
-<tr><th>Система</th><th>Цикл</th><th>Результат</th></tr>
-<tr><td><strong>Эволюция</strong></td><td>Мутация → Отбор → Адаптация</td><td>3.5 млрд лет → жизнь</td></tr>
-<tr><td><strong>Наука</strong></td><td>Гипотеза → Эксперимент → Данные</td><td>400 лет → всё знание</td></tr>
-<tr><td><strong>SpaceX</strong></td><td>Тест → Взрыв → Учись → Повтори</td><td>4 взрыва → посадка ракеты</td></tr>
-<tr><td><strong>Toyota</strong></td><td>PDCA ежедневно</td><td>75 лет → №1 автопром</td></tr>
-<tr><td><strong>Стартап</strong></td><td>MVP → Метрики → Pivot/Persevere</td><td>PMF за месяцы, не годы</td></tr>
-</table>
-<div class="ins fu d3"><p><strong>Инсайт:</strong> Не тот, кто умнее. Не тот, у кого больше денег. <strong>Тот, кто быстрее проходит циклы обучения.</strong></p></div>
+<div class="tg ta fu">Закон природы · Nature 2025 · 450 млн лет</div>
+<h2 class="fu d1">Как побеждает <span class="gt">природа</span></h2>
+<div class="g2 fu d2">
+<div class="c" style="border-color:var(--gn)"><h3>🍄 Грибные сети (Nature)</h3><p>Микориза соединяет 70% растений Земли. «Мать-деревья» передают питание молодым на расстоянии 30м. Лес — не деревья, а СЕТЬ.</p></div>
+<div class="c" style="border-color:var(--cn)"><h3>🐜 Муравьиный рой</h3><p>100 млн лет. Без начальника. Каждый муравей = простые правила → коллективный интеллект решает сложнейшие задачи.</p></div>
+<div class="c" style="border-color:var(--yl)"><h3>🌊 Коралловый риф</h3><p>Симбиоз: полипы + водоросли + рыбы. Каждый элемент усиливает остальные. Разнообразие = устойчивость.</p></div>
+<div class="c" style="border-color:var(--or)"><h3>🧬 r/K стратегии</h3><p>r: много потомков, мало заботы (стартапы). K: мало потомков, максимум заботы (корпорации). Побеждает тот, кто адаптируется.</p></div>
+</div>
+<div class="ins fu d3"><p><strong>Инсайт из Nature:</strong> Леса, где РАЗНЫЕ грибные стратегии работают вместе, дают на 77% больше продуктивности. <strong>Разнообразие и кооперация > монокультура.</strong></p></div>
 </div></div>
 
-<!-- 9 -->
+<!-- 8 ANTIFRAGILE -->
 <div class="s"><div class="w" style="text-align:center">
 <div class="tg ta fu">Закон 4 · Талеб · Acemoglu (Нобель 2024)</div>
 <h1 class="fu d1"><span class="gt">Антихрупкость</span></h1>
-<h2 class="fu d2">Удары делают сильнее, не слабее</h2>
+<h2 class="fu d2">Удары делают сильнее</h2>
 <div class="g3 fu d3">
-<div class="c" style="text-align:center"><div style="font-size:1.8rem">💪</div><h3>Мышцы</h3><p>Растут от стресса</p></div>
-<div class="c" style="text-align:center"><div style="font-size:1.8rem">🦠</div><h3>Иммунитет</h3><p>Усиливается от болезней</p></div>
-<div class="c" style="text-align:center"><div style="font-size:1.8rem">🏢</div><h3>Amazon</h3><p>Dot-com crash -90% → $2T</p></div>
+<div class="c" style="text-align:center"><h3>💪 Мышцы</h3><p>Растут от стресса. Нет нагрузки = атрофия</p></div>
+<div class="c" style="text-align:center"><h3>🦠 Иммунитет</h3><p>Укрепляется от болезней. Стерильность = слабость</p></div>
+<div class="c" style="text-align:center"><h3>📦 Amazon</h3><p>Dot-com crash -90% → перестроил → $2 трлн</p></div>
 </div>
 </div></div>
 
-<!-- 10 -->
+<!-- 9 BARBELL + ACEMOGLU -->
 <div class="s"><div class="w">
-<div class="tg fu">Барбелл-стратегия · Acemoglu</div>
+<div class="tg fu">Барбелл · Открытые системы</div>
 <h2 class="fu d1">Формула <span class="gt">антихрупкости</span></h2>
 <div class="g2 fu d2">
-<div class="c" style="border-color:var(--gn)"><div class="n gn">80–90%</div><h3>Безопасная часть</h3><p>Cash, проверенный продукт, стабильность. Защита от катастрофы.</p></div>
-<div class="c" style="border-color:var(--ac)"><div class="n ac">10–20%</div><h3>Upside-эксперименты</h3><p>Маленькие ставки с огромным потенциалом. Downside ограничен, upside — нет.</p></div>
+<div class="c" style="border-color:var(--gn)"><div class="n gn">80–90%</div><h3>Безопасная часть</h3><p>Cash, проверенный продукт, стабильность</p></div>
+<div class="c" style="border-color:var(--ac)"><div class="n ac">10–20%</div><h3>Upside-эксперименты</h3><p>Маленькие ставки с огромным потенциалом</p></div>
 </div>
-<div class="ins fu d3"><p><strong>Acemoglu (Нобель 2024):</strong> Открытые системы (инклюзивные институты) переживают кризисы и растут. Закрытые (экстрактивные) — умирают. Доказано на 500+ лет данных. Работает для стран, компаний, команд.</p></div>
+<div class="ins fu d3"><p><strong>Acemoglu (Нобель 2024):</strong> Открытые системы переживают кризисы и растут. Закрытые — умирают. 500+ лет данных. Работает для стран, компаний, команд и личности.</p></div>
 </div></div>
 
-<!-- 11 -->
+<!-- 10 FIRST PRINCIPLES -->
 <div class="s"><div class="w" style="text-align:center">
-<div class="tg ta fu">Закон 5 · 2 400 лет · Аристотель → Маск</div>
+<div class="tg ta fu">Закон 5 · Аристотель · Маск · Ломоносов</div>
 <h1 class="fu d1"><span class="gt">Первые принципы</span></h1>
 <h2 class="fu d2">Думай с нуля, не «как принято»</h2>
-<div class="st fu d3">
-<div class="si"><div><h3>Определи допущения</h3><p>«Все так делают потому что...»</p></div></div>
-<div class="si"><div><h3>Разбей до фундамента</h3><p>«Что ТОЧНО правда? Что можно доказать?»</p></div></div>
-<div class="si"><div><h3>Собери заново</h3><p>«Как бы я сделал, если бы не знал, как "принято"?»</p></div></div>
-</div>
-</div></div>
-
-<!-- 12 -->
-<div class="s"><div class="w">
-<div class="tg fu">First Principles на практике</div>
-<h2 class="fu d1">Примеры <span class="gt">мышления с нуля</span></h2>
-<div class="g2 fu d2">
-<div class="c"><h3>🚀 Маск (SpaceX)</h3><p>Ракета $65M. Материалы = 2% цены. «Построю сам» → $2.7M за запуск</p></div>
-<div class="c"><h3>📖 Гутенберг</h3><p>Виноградный пресс + шрифты = печатный станок. Революция знаний</p></div>
-<div class="c"><h3>✈️ Братья Райт</h3><p>Все копировали птиц. Они изучили аэродинамику с НУЛЯ → полёт</p></div>
-<div class="c"><h3>📺 Netflix</h3><p>DVD → стриминг → свой контент. Каждый раз переизобретали себя</p></div>
-</div>
-<div class="ins fu d3"><p><strong>Мангер (инверсия):</strong> «Скажите, где я умру, и я туда не пойду.» Не «как преуспеть?», а <strong>«что ГАРАНТИРОВАННО приведёт к провалу?»</strong> Убери это.</p></div>
-</div></div>
-
-<!-- 13 -->
-<div class="s"><div class="w" style="text-align:center">
-<div class="tg ta fu">Закон 6 · Stanford · MIT · Harvard (2022)</div>
-<h1 class="fu d1"><span class="gt">Слабые связи</span></h1>
-<h2 class="fu d2">Лучшие возможности — от СЛУЧАЙНЫХ знакомых</h2>
-<p class="fu d3" style="margin:1rem auto 0">Грановеттер (Stanford, 1973): 70 000 цитирований. Подтверждено экспериментально MIT + Harvard (2022).</p>
-</div></div>
-
-<!-- 14 -->
-<div class="s"><div class="w">
-<div class="tg fu">Грановеттер · Данбар</div>
-<h2 class="fu d1">Почему <span class="gt">случайные знакомые</span> ценнее друзей</h2>
-<div class="g2 fu d2">
-<div class="c" style="border-color:var(--rd)"><h3>👨‍👩‍👧‍👦 Близкие друзья</h3><p>Знают тех же людей. Ту же информацию. Тот же мир. <strong style="color:var(--rd)">Эхо-камера.</strong></p></div>
-<div class="c" style="border-color:var(--gn)"><h3>🌐 Случайные знакомые</h3><p>Имеют доступ к ДРУГИМ сетям. Другая информация. Другие возможности. <strong style="color:var(--gn)">Мост к новым мирам.</strong></p></div>
-</div>
-<div class="ins fu d3"><p><strong>Инсайт:</strong> Лучшие работы, идеи и инвестиции приходят через людей, которых ты едва знаешь. Знакомься с людьми из ДРУГИХ индустрий. Это математически увеличивает «площадь удачи».</p></div>
-</div></div>
-
-<!-- 15 -->
-<div class="s"><div class="w" style="text-align:center">
-<div class="tg ta fu">Закон 7 · Senge (MIT) · Meadows · Collins</div>
-<h1 class="fu d1"><span class="gt">Система</span></h1>
-<h2 class="fu d2">Ищи точки рычага — где малое = огромное</h2>
-</div></div>
-
-<!-- 16 -->
-<div class="s"><div class="w">
-<div class="tg fu">Flywheel · Collins + Bezos</div>
-<h2 class="fu d1">Маховик: <span class="gt">тысячи шагов в одном направлении</span></h2>
-<div class="g2 fu d2">
-<div>
-<div class="c" style="margin-bottom:.7rem"><h3>📦 Amazon Flywheel</h3><p>Низкие цены → трафик → продавцы → выбор → ещё ниже цены → ∞</p></div>
-<div class="c" style="margin-bottom:.7rem"><h3>🍎 Apple</h3><p>Железо + софт + сервисы + магазин + бренд = невозможно скопировать</p></div>
-<div class="c"><h3>🏛️ Рим</h3><p>Дороги + армия + право + торговля + культура = 1000 лет</p></div>
-</div>
-<div>
-<div class="ins"><p><strong>Collins:</strong> Ни одна великая компания не возникла от одного «большого решения». Все — от <strong>тысяч маленьких решений в одном направлении.</strong></p></div>
-<div class="ins" style="margin-top:.7rem"><p><strong>Meadows:</strong> Самый слабый рычаг — менять числа (бюджет, цену). Самый сильный — <strong>менять ПАРАДИГМУ мышления.</strong></p></div>
-</div>
-</div>
-</div></div>
-
-<!-- 17 -->
-<div class="s"><div class="w" style="text-align:center">
-<div class="tg fu">Военное искусство · 2 500 лет</div>
-<h2 class="fu d1">Сунь Цзы: <span class="gt">величайшая победа — без боя</span></h2>
-<div class="g3 fu d2">
-<div class="c"><h3>🔍 Познай себя</h3><p>И врага. Честная оценка сил</p></div>
-<div class="c"><h3>⚔️ Концентрация</h3><p>Вся сила в одну точку прорыва</p></div>
-<div class="c"><h3>⚡ Скорость</h3><p>Быстрее противника = победа</p></div>
-<div class="c"><h3>🌊 Без боя</h3><p>Создай Blue Ocean. Конкуренция нерелевантна</p></div>
-<div class="c"><h3>🏔️ Местность</h3><p>Выбирай поле битвы (рынок) с преимуществом</p></div>
-<div class="c"><h3>🔄 Гибкость</h3><p>Адаптируйся. Жёсткий план = поражение</p></div>
-</div>
-</div></div>
-
-<!-- 18 -->
-<div class="s"><div class="w" style="text-align:center">
-<div class="tg fu">Стоицизм · 2 000 лет</div>
-<h2 class="fu d1">Философия <span class="gt">победителей</span></h2>
-<div class="q fu d2" style="margin:1rem auto;text-align:left">Ты имеешь власть над своим умом — не над внешними событиями. Осознай это — и обретёшь силу.<div class="qa">Марк Аврелий · Император Рима</div></div>
-<div class="g3 fu d3">
-<div class="c"><h3>🎯 Контролируй своё</h3><p>Действия, мысли, реакции. Остальное — шум.</p></div>
-<div class="c"><h3>❤️ Amor Fati</h3><p>Люби судьбу. Каждая неудача = топливо роста.</p></div>
-<div class="c"><h3>💀 Memento Mori</h3><p>Помни о смерти. Не откладывай.</p></div>
-</div>
-</div></div>
-
-<!-- 19 -->
-<div class="s"><div class="w" style="text-align:center">
-<div class="tg fu">Kahneman · Нобель 2002</div>
-<h2 class="fu d1">Удача > таланта</h2>
-<div class="q fu d2" style="margin:1rem auto;text-align:left">Успех = Талант + Удача. Большой успех = Чуть больше таланта + Много удачи.<div class="qa">Daniel Kahneman · Нобелевская премия 2002</div></div>
 <div class="g2 fu d3">
-<div class="c"><h3>📊 Факт</h3><p>~50% разницы в доходах НЕ объясняются личными качествами. Таланты распределены нормально, богатство — по степенному закону.</p></div>
-<div class="c" style="border-color:var(--gn)"><h3>🍀 Как «создавать удачу»</h3><p>Больше попыток. Больше знакомств (weak ties). Держи ликвидность. Барбелл (Талеб). Будь готов схватить момент.</p></div>
+<div class="c"><h3>🚀 Маск (SpaceX)</h3><p>Ракета $65M. Материалы = 2%. «Построю сам» → $2.7M за запуск</p></div>
+<div class="c"><h3>🔬 Ломоносов</h3><p>Сын рыбака → пешком в Москву → основал МГУ, открыл атмосферу Венеры. С нуля.</p></div>
+<div class="c"><h3>📖 Гутенберг</h3><p>Виноградный пресс + шрифт = печатный станок → революция знаний</p></div>
+<div class="c"><h3>✈️ Братья Райт</h3><p>Все копировали птиц. Они изучили аэродинамику с нуля → полёт</p></div>
 </div>
 </div></div>
 
-<!-- 20 -->
-<div class="s"><div class="w" style="text-align:center">
-<div class="tg ta fu">Kahneman + Thaler</div>
-<h2 class="fu d1"><span class="gt">95%</span> решений эмоциональны</h2>
-<div class="sp fu d2" style="margin-top:1.2rem">
-<div class="c" style="text-align:center"><div class="n ac">Система 1</div><h3>⚡ Быстрая</h3><p>17 мс · Интуиция<br><strong>Принимает решение</strong></p></div>
-<div class="c" style="text-align:center"><div class="n" style="color:var(--mt)">Система 2</div><h3>🧠 Медленная</h3><p>Анализ · Логика<br><strong>Оправдывает</strong> решение</p></div>
-</div>
-<p class="fu d3" style="margin:1rem auto 0">Потеря болит в <strong style="color:var(--rd)">2.5 раза</strong> сильнее выигрыша. «Ты теряешь X» всегда сильнее «ты получишь X».</p>
-</div></div>
-
-<!-- 21 -->
+<!-- 11 INVERSION -->
 <div class="s"><div class="w">
-<div class="tg fu">Nature · Frontiers · 2024</div>
-<h2 class="fu d1">Гормональная карта <span class="gt">решений</span></h2>
-<div class="g3 fu d2" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr))">
-<div class="c"><h3>🟣 Дофамин</h3><p>Желание, «хочу ещё»</p></div>
-<div class="c"><h3>🩷 Окситоцин</h3><p>Доверие, лояльность</p></div>
-<div class="c"><h3>🟡 Серотонин</h3><p>Статус, уверенность</p></div>
-<div class="c"><h3>🔴 Кортизол</h3><p>Страх, FOMO</p></div>
-<div class="c"><h3>🟢 Эндорфины</h3><p>Облегчение, радость</p></div>
-<div class="c"><h3>🟠 Тестостерон</h3><p>Риск, амбиции</p></div>
-</div>
-<div class="ins fu d3"><p><strong>Nature 2024:</strong> Доверие (окситоцин) усиливает дофамин. Доверие = мультипликатор ВСЕХ гормонов. Не манипулируй — строй доверие.</p></div>
-</div></div>
-
-<!-- 22 -->
-<div class="s"><div class="w">
-<div class="tg fu">Sequoia · 146 секунд · 1% шанс</div>
-<h2 class="fu d1">Привлечение <span class="gt">инвестиций</span></h2>
-<div class="st fu d2">
-<div class="si"><div><h3>Purpose</h3><p>Одно предложение: что вы делаете и зачем</p></div></div>
-<div class="si"><div><h3>Problem → Solution</h3><p>Боль клиента → ваше решение</p></div></div>
-<div class="si"><div><h3>Why Now</h3><p>Почему СЕЙЧАС — тайминг (42%!)</p></div></div>
-<div class="si"><div><h3>Market</h3><p>TAM → SAM → SOM. $1B+ для Series A</p></div></div>
-<div class="si"><div><h3>Team + Ask</h3><p>Почему вы + сколько привлекаете</p></div></div>
-</div>
-<p class="fu d3" style="margin-top:.8rem">Инвесторы тратят <strong>146 секунд</strong> на deck. Первые 3 слайда = 70% решения. Структура > дизайн.</p>
-</div></div>
-
-<!-- 23 -->
-<div class="s"><div class="w">
-<div class="tg ta fu">CB Insights · Sequoia · 2026</div>
-<h2 class="fu d1">Тренды <span class="gt">2026</span></h2>
-<div class="g2 fu d2">
-<div class="c" style="border-color:var(--ac)"><h3>🤖 AI Agents: $52.6B к 2030</h3><p>33% всего VC. Мультимодальные: голос + текст + видео. 40% AI-бюджетов → агенты.</p></div>
-<div class="c" style="border-color:var(--cn)"><h3>🏗️ Vertical AI побеждает</h3><p>Генерик-AI пузырь лопается. Глубокий AI для юристов, врачей, логистики.</p></div>
-<div class="c" style="border-color:var(--gn)"><h3>👤 Solo AI Founders</h3><p>$10M ARR с 0 сотрудниками. AI-агенты заменяют отделы.</p></div>
-<div class="c" style="border-color:var(--or)"><h3>📊 OaaS</h3><p>Outcome as a Service: продавай результат, не подписку. Гарантия ROI.</p></div>
-</div>
-</div></div>
-
-<!-- 24 -->
-<div class="s"><div class="w">
-<div class="tg fu" style="border-color:var(--rd);color:var(--rd)">Инверсия Мангера</div>
-<h2 class="fu d1">Что <span class="rd">ГАРАНТИРУЕТ</span> провал</h2>
-<table class="fu d2">
-<tr><th>Нарушение</th><th>Результат</th></tr>
-<tr><td>Нет compound → разовые усилия</td><td><strong class="rd">Ноль результатов</strong></td></tr>
-<tr><td>Нет фокуса → 10 проектов сразу</td><td><strong class="rd">Ноль прорывов</strong></td></tr>
-<tr><td>Нет обратной связи → работа в вакууме</td><td><strong class="rd">Строишь ненужное</strong></td></tr>
-<tr><td>Хрупкость → один удар = конец</td><td><strong class="rd">Первый кризис убивает</strong></td></tr>
-<tr><td>Мышление по аналогии → «все так делают»</td><td><strong class="rd">Копируешь чужие ошибки</strong></td></tr>
-<tr><td>Только близкие связи → эхо-камера</td><td><strong class="rd">Нет новых возможностей</strong></td></tr>
-<tr><td>Нет системного мышления</td><td><strong class="rd">Улучшаешь часть, ломаешь целое</strong></td></tr>
+<div class="tg fu">Мангер · Инверсия</div>
+<h2 class="fu d1">Не «как <span class="gn">преуспеть</span>», а «что <span class="rd">убьёт</span>»</h2>
+<div class="q fu d2" style="margin-bottom:1rem">Скажите мне, где я умру, и я туда не пойду.<div class="qa">Charlie Munger · вице-председатель Berkshire Hathaway</div></div>
+<table class="fu d3">
+<tr><th>Нарушение</th><th>Гарантированный результат</th></tr>
+<tr><td>Разовые усилия без compound</td><td class="rd"><strong>Ноль результатов</strong></td></tr>
+<tr><td>10 проектов одновременно</td><td class="rd"><strong>Ноль прорывов</strong></td></tr>
+<tr><td>Работа без обратной связи</td><td class="rd"><strong>Строишь ненужное</strong></td></tr>
+<tr><td>Хрупкость: один удар = конец</td><td class="rd"><strong>Первый кризис убивает</strong></td></tr>
+<tr><td>Копирование «как все делают»</td><td class="rd"><strong>Копируешь чужие ошибки</strong></td></tr>
 </table>
 </div></div>
 
-<!-- 25 INSIGHTS -->
+<!-- 12 WEAK TIES -->
+<div class="s"><div class="w" style="text-align:center">
+<div class="tg ta fu">Закон 6 · Stanford · 70 000 цитирований</div>
+<h1 class="fu d1"><span class="gt">Слабые связи</span></h1>
+<h2 class="fu d2">Лучшие возможности от случайных знакомых</h2>
+<div class="g2 fu d3">
+<div class="c" style="border-color:var(--rd)"><h3>👨‍👩‍👧‍👦 Близкие друзья</h3><p>Знают то же самое. <strong class="rd">Эхо-камера.</strong></p></div>
+<div class="c" style="border-color:var(--gn)"><h3>🌐 Случайные знакомые</h3><p>Доступ к ДРУГИМ мирам. <strong class="gn">Мост к возможностям.</strong></p></div>
+</div>
+<p class="fu d4" style="margin:.8rem auto 0">Подтверждено экспериментально: Stanford + MIT + Harvard, 2022.</p>
+</div></div>
+
+<!-- 13 SYSTEM -->
 <div class="s"><div class="w">
-<div class="tg ta fu">10 инсайтов · Одна мысль = одно изменение</div>
-<h2 class="fu d1"><span class="gt">Инсайты</span></h2>
-<div class="st fu d2" style="counter-reset:s">
-<div class="si"><div><p>Ты проигрываешь не потому что не знаешь что делать. А потому что делаешь <strong>слишком много</strong>. ФОКУС.</p></div></div>
-<div class="si"><div><p>1% в день — не мало. Через год ты в <strong>38 раз</strong> лучше. Через 2 года — в 1 400. Математика не обманывает.</p></div></div>
-<div class="si"><div><p>SpaceX взорвал 4 ракеты прежде чем посадил одну. Каждый взрыв = урок. <strong>Скорость циклов</strong> > идеальный план.</p></div></div>
-<div class="si"><div><p>Удача = попытки × знакомства × готовность. Не случайность — <strong>математика</strong>.</p></div></div>
-<div class="si"><div><p>Не копируй. Спроси «почему?» 5 раз. Доберись до фундамента. <strong>Построй с нуля.</strong></p></div></div>
+<div class="tg ta fu">Закон 7 · Senge · Collins · Meadows · Природа</div>
+<h2 class="fu d1">Система: <span class="gt">маховик + точки рычага</span></h2>
+<div class="g2 fu d2">
+<div>
+<div class="c" style="margin-bottom:.6rem"><h3>📦 Amazon Flywheel</h3><p>Низкие цены → трафик → продавцы → выбор → ещё ниже → ∞</p></div>
+<div class="c" style="margin-bottom:.6rem"><h3>🍄 Грибная сеть</h3><p>Каждое дерево усиливает сеть. Сеть усиливает деревья. Compound.</p></div>
+<div class="c"><h3>🏛️ Рим</h3><p>Дороги + армия + право + торговля = система на 1000 лет</p></div>
+</div>
+<div>
+<div class="ins"><p><strong>Collins:</strong> Великие компании делали не «революции», а тысячи маленьких шагов <strong>в одном направлении.</strong></p></div>
+<div class="ins" style="margin-top:.6rem"><p><strong>Meadows (MIT):</strong> Самый слабый рычаг — менять числа (бюджет). Самый сильный — <strong>менять парадигму мышления.</strong></p></div>
+</div>
 </div>
 </div></div>
 
-<!-- 26 INSIGHTS 2 -->
+<!-- 14 MILITARY -->
+<div class="s"><div class="w" style="text-align:center">
+<div class="tg fu">Военное искусство · Россия · Азия · Европа</div>
+<h2 class="fu d1">Стратегия <span class="gt">победителей</span></h2>
+<div class="g3 fu d2">
+<div class="c"><h3>⚔️ Суворов</h3><p>Глазомер · Быстрота · Натиск<br><small class="ac">63 победы / 0 поражений</small></p></div>
+<div class="c"><h3>🏯 Сунь Цзы</h3><p>Победа без боя · Познай себя и врага<br><small class="ac">2 500 лет</small></p></div>
+<div class="c"><h3>👑 Наполеон</h3><p>Решение при 70% данных · Массирование сил<br><small class="ac">9 принципов войны</small></p></div>
+</div>
+<div class="ins fu d3"><p><strong>Общее:</strong> Скорость решений · Концентрация сил · Внезапность · Гибкость · Знание противника. Работает 2 500 лет подряд.</p></div>
+</div></div>
+
+<!-- 15 STOICISM -->
+<div class="s"><div class="w" style="text-align:center">
+<div class="tg fu">Философия · 2 000 лет</div>
+<h2 class="fu d1"><span class="gt">Стоицизм</span></h2>
+<div class="q fu d2" style="margin:1rem auto;text-align:left">Ты имеешь власть над своим умом — не над внешними событиями.<div class="qa">Марк Аврелий · Император Рима</div></div>
+<div class="g3 fu d3">
+<div class="c"><h3>🎯 Контролируй своё</h3><p>Действия, мысли. Остальное — шум.</p></div>
+<div class="c"><h3>❤️ Amor Fati</h3><p>Каждая неудача = топливо роста.</p></div>
+<div class="c"><h3>💀 Memento Mori</h3><p>Не откладывай. Время конечно.</p></div>
+</div>
+</div></div>
+
+<!-- 16 KAHNEMAN -->
+<div class="s"><div class="w" style="text-align:center">
+<div class="tg fu">Kahneman · Нобель 2002</div>
+<h2 class="fu d1"><span class="gt">95%</span> решений эмоциональны</h2>
+<div class="sp fu d2" style="margin-top:1rem">
+<div class="c" style="text-align:center"><div class="n ac">Система 1</div><h3>⚡ 17 мс</h3><p>Интуиция. <strong>Решает.</strong></p></div>
+<div class="c" style="text-align:center"><div class="n" style="color:var(--mt)">Система 2</div><h3>🧠 Секунды</h3><p>Логика. <strong>Оправдывает.</strong></p></div>
+</div>
+<p class="fu d3" style="margin:.8rem auto 0">Потеря болит в <strong class="rd">2.5 раза</strong> сильнее выигрыша. «Ты теряешь X» > «ты получишь X».</p>
+</div></div>
+
+<!-- 17 HORMONES -->
+<div class="s"><div class="w">
+<div class="tg fu">Nature 2024 · Frontiers</div>
+<h2 class="fu d1">Гормоны <span class="gt">решений</span></h2>
+<div class="g3 fu d2" style="grid-template-columns:repeat(auto-fit,minmax(145px,1fr))">
+<div class="c"><h3>🟣 Дофамин</h3><p>Желание, «хочу ещё»</p></div>
+<div class="c"><h3>🩷 Окситоцин</h3><p>Доверие</p></div>
+<div class="c"><h3>🟡 Серотонин</h3><p>Статус, уверенность</p></div>
+<div class="c"><h3>🔴 Кортизол</h3><p>Страх, FOMO</p></div>
+<div class="c"><h3>🟢 Эндорфины</h3><p>Облегчение</p></div>
+<div class="c"><h3>🟠 Тестостерон</h3><p>Риск, амбиции</p></div>
+</div>
+<div class="ins fu d3"><p><strong>Nature 2024:</strong> Доверие (окситоцин) усиливает дофамин. <strong>Доверие = мультипликатор всех гормонов.</strong></p></div>
+</div></div>
+
+<!-- 18 RUSSIAN WINNERS -->
+<div class="s"><div class="w">
+<div class="tg ta fu">Русские победители</div>
+<h2 class="fu d1">Россия: <span class="gt">от Суворова до Wildberries</span></h2>
+<div class="g2 fu d2">
+<div class="c"><h3>⚔️ Суворов</h3><p>63 победы, 0 поражений. «Наука побеждать»: глазомер, быстрота, натиск.</p></div>
+<div class="c"><h3>🔬 Ломоносов</h3><p>Сын рыбака → пешком в Москву → МГУ, атмосфера Венеры. First principles.</p></div>
+<div class="c"><h3>🛒 Бакальчук (Wildberries)</h3><p>Из квартиры в декрете → $50B оборот, 80M клиентов. Compound 20 лет.</p></div>
+<div class="c"><h3>🔍 Волож (Yandex)</h3><p>CompTek → Yandex → $30B. Школа Анализа Данных. Системное мышление.</p></div>
+</div>
+<div class="ins fu d3"><p><strong>Паттерн:</strong> Суворов = фокус + скорость. Ломоносов = первые принципы. Бакальчук = compound. Волож = система. Те же 7 законов.</p></div>
+</div></div>
+
+<!-- 19 TRENDS 2026 -->
+<div class="s"><div class="w">
+<div class="tg ta fu">CB Insights · 2026</div>
+<h2 class="fu d1">Тренды <span class="gt">2026</span></h2>
+<div class="g2 fu d2">
+<div class="c" style="border-color:var(--ac)"><h3>🤖 AI Agents: $52.6B к 2030</h3><p>33% всего VC. Мультимодальные агенты. 40% AI-бюджетов → агенты.</p></div>
+<div class="c" style="border-color:var(--cn)"><h3>🏗️ Vertical AI</h3><p>Генерик-AI пузырь лопается. Глубокий AI для конкретной индустрии.</p></div>
+<div class="c" style="border-color:var(--gn)"><h3>👤 Solo Founders + AI</h3><p>$10M ARR с 0 сотрудниками. AI-агенты заменяют отделы.</p></div>
+<div class="c" style="border-color:var(--or)"><h3>📊 OaaS</h3><p>Продавай результат, не подписку. Гарантия ROI = конкурентное преимущество.</p></div>
+</div>
+</div></div>
+
+<!-- 20 INVESTMENT -->
+<div class="s"><div class="w">
+<div class="tg fu">Sequoia · 146 секунд</div>
+<h2 class="fu d1">Привлечение <span class="gt">инвестиций</span></h2>
+<div class="st fu d2">
+<div class="si"><div><h3>Purpose</h3><p>Одно предложение: что и зачем</p></div></div>
+<div class="si"><div><h3>Problem → Solution</h3><p>Боль → как решаешь</p></div></div>
+<div class="si"><div><h3>Why Now</h3><p>Тайминг (42%!)</p></div></div>
+<div class="si"><div><h3>Market</h3><p>TAM→SAM→SOM. $1B+</p></div></div>
+<div class="si"><div><h3>Team + Ask</h3><p>Почему вы + сколько нужно</p></div></div>
+</div>
+<p class="fu d3" style="margin-top:.6rem">Wharton MBA: $230K. Harvard: $147K. INSEAD: €108K. Но Бакальчук и Ломоносов доказали: <strong>образование ≠ успех.</strong></p>
+</div></div>
+
+<!-- 21 INSIGHTS -->
+<div class="s"><div class="w">
+<div class="tg ta fu">Инсайты · Одна мысль = одно изменение</div>
+<h2 class="fu d1"><span class="gt">10 инсайтов</span></h2>
+<div class="st fu d2" style="counter-reset:s">
+<div class="si"><div><p>Ты проигрываешь не потому что не знаешь что делать. А потому что делаешь <strong>слишком много.</strong></p></div></div>
+<div class="si"><div><p>1% в день — не мало. Через год ты в <strong>38 раз</strong> лучше. Коралловый риф строился так 20 000 лет.</p></div></div>
+<div class="si"><div><p>SpaceX взорвал 4 ракеты. Каждый взрыв = урок. <strong>Скорость циклов</strong> > идеальный план.</p></div></div>
+<div class="si"><div><p>Лес работает не потому что деревья сильные. А потому что грибная сеть <strong>соединяет их всех.</strong></p></div></div>
+<div class="si"><div><p>Суворов побеждал не числом, а <strong>скоростью решений.</strong> 63 победы, 0 поражений.</p></div></div>
+</div>
+</div></div>
+
+<!-- 22 INSIGHTS 2 -->
 <div class="s"><div class="w">
 <div class="tg ta fu">Инсайты · продолжение</div>
 <div class="st fu d1" style="counter-reset:s 5">
-<div class="si"><div><p>Collins изучил 1 435 компаний за 30 лет. Великие не делали «революций». Они делали <strong>тысячи маленьких шагов в одном направлении</strong>. Маховик.</p></div></div>
-<div class="si"><div><p><strong>Acemoglu (Нобель 2024):</strong> Открытые системы побеждают. Закрытые умирают. Доказано на 500+ лет. Работает для стран, компаний, команд.</p></div></div>
-<div class="si"><div><p>Наполеон побеждал не потому что был умнее. Он <strong>быстрее принимал решения</strong> при 70% информации, пока враги ждали 100%.</p></div></div>
-<div class="si"><div><p>Лучшие возможности придут от людей, которых ты <strong>едва знаешь</strong>. Доказано Stanford, MIT, Harvard.</p></div></div>
-<div class="si"><div><p>Самый мощный рычаг — не деньги, не технология, не команда. <strong>Изменение парадигмы мышления.</strong> (Meadows, MIT)</p></div></div>
+<div class="si"><div><p>Collins изучил 1 435 компаний: великие делали <strong>тысячи маленьких шагов в одном направлении.</strong> Маховик.</p></div></div>
+<div class="si"><div><p><strong>Acemoglu (Нобель 2024):</strong> Открытые системы побеждают. Закрытые умирают. 500+ лет данных.</p></div></div>
+<div class="si"><div><p>Бакальчук начала из квартиры в декрете. <strong>Compound effect за 20 лет</strong> → $50B оборот.</p></div></div>
+<div class="si"><div><p>Лучшие возможности придут от людей, которых ты <strong>едва знаешь.</strong> Stanford, MIT, Harvard.</p></div></div>
+<div class="si"><div><p>Самый мощный рычаг — не деньги, не технология. <strong>Изменение парадигмы мышления.</strong> (Meadows, MIT)</p></div></div>
 </div>
 </div></div>
 
-<!-- 27 FINAL -->
+<!-- 23 FINAL -->
 <div class="s"><div class="w" style="text-align:center">
 <div class="tg ta fu">Мета-формула</div>
-<h1 class="fu d1"><span class="gt">7 законов</span></h1>
-<div class="g4 fu d2" style="grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-top:1.5rem">
-<div class="c" style="text-align:center;padding:.8rem"><h3>📈</h3><p style="font-size:.75rem">Compound<br>1% × ∞</p></div>
-<div class="c" style="text-align:center;padding:.8rem"><h3>🎯</h3><p style="font-size:.75rem">Фокус<br>одна точка</p></div>
-<div class="c" style="text-align:center;padding:.8rem"><h3>🔄</h3><p style="font-size:.75rem">Обратная связь<br>быстрые циклы</p></div>
-<div class="c" style="text-align:center;padding:.8rem"><h3>💪</h3><p style="font-size:.75rem">Антихрупкость<br>расти от ударов</p></div>
-<div class="c" style="text-align:center;padding:.8rem"><h3>🔬</h3><p style="font-size:.75rem">Первые принципы<br>думай с нуля</p></div>
-<div class="c" style="text-align:center;padding:.8rem"><h3>🌐</h3><p style="font-size:.75rem">Слабые связи<br>новые миры</p></div>
-<div class="c" style="text-align:center;padding:.8rem"><h3>⚙️</h3><p style="font-size:.75rem">Система<br>точки рычага</p></div>
+<h2 class="fu d1"><span class="gt">7 законов</span></h2>
+<div class="g4 fu d2" style="grid-template-columns:repeat(auto-fit,minmax(115px,1fr));margin-top:1.2rem">
+<div class="c" style="text-align:center;padding:.7rem"><h3>📈</h3><p style="font-size:.7rem">Compound<br>1% × ∞</p></div>
+<div class="c" style="text-align:center;padding:.7rem"><h3>🎯</h3><p style="font-size:.7rem">Фокус<br>одна точка</p></div>
+<div class="c" style="text-align:center;padding:.7rem"><h3>🔄</h3><p style="font-size:.7rem">Обратная связь<br>быстрые циклы</p></div>
+<div class="c" style="text-align:center;padding:.7rem"><h3>💪</h3><p style="font-size:.7rem">Антихрупкость<br>расти от ударов</p></div>
+<div class="c" style="text-align:center;padding:.7rem"><h3>🔬</h3><p style="font-size:.7rem">Первые принципы<br>думай с нуля</p></div>
+<div class="c" style="text-align:center;padding:.7rem"><h3>🌐</h3><p style="font-size:.7rem">Слабые связи<br>новые миры</p></div>
+<div class="c" style="text-align:center;padding:.7rem"><h3>⚙️</h3><p style="font-size:.7rem">Система<br>точки рычага</p></div>
 </div>
-<div class="ins fu d3" style="margin-top:1.5rem;text-align:left"><p style="font-size:1.1rem;text-align:center"><strong>Их нарушение гарантирует провал.<br>Их соблюдение максимизирует вероятность успеха.</strong></p></div>
-<p class="fu d4" style="margin-top:1.2rem;font-size:.72rem;color:var(--mt)">Сунь Цзы · Аристотель · Марк Аврелий · Клаузевиц · Наполеон · Деминг · Toyota · Грановеттер · Бойд · Senge · Meadows<br>Collins · Munger · Dalio · Талеб · Маск · Clear · Acemoglu (Нобель 2024) · Kahneman (Нобель 2002) · Thaler (Нобель 2017)</p>
+<div class="ins fu d3" style="margin-top:1rem"><p style="text-align:center;font-size:1rem"><strong>Их нарушение гарантирует провал.<br>Их соблюдение максимизирует вероятность успеха.</strong></p></div>
+<p class="fu d4" style="margin-top:.8rem;font-size:.65rem;color:var(--mt)">Суворов · Сунь Цзы · Аристотель · Марк Аврелий · Ломоносов · Наполеон · Деминг · Toyota · Грановеттер · Бойд<br>Collins · Munger · Dalio · Талеб · Маск · Бакальчук · Волож · Acemoglu · Kahneman · Thaler · Meadows · Nature</p>
 </div></div>
 
 </div>
