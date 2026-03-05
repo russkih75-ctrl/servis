@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Анатомия успешного стартапа — Полное исследование 2026</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#09090f;--surface:#111118;--card:#17171f;--border:#252535;
+--text:#e8e8f0;--muted:#7878a0;--accent:#7c3aed;--accent2:#c026d3;
+--green:#22c55e;--red:#ef4444;--yellow:#eab308;--cyan:#06b6d4;--orange:#f97316;
+--grad:linear-gradient(135deg,#7c3aed,#c026d3,#ec4899);
+--font:Inter,system-ui,-apple-system,sans-serif;
+}
+html{font-size:16px}
+body{font-family:var(--font);background:var(--bg);color:var(--text);overflow:hidden;height:100vh}
+.deck{position:relative;width:100%;height:100vh}
+.s{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:clamp(1.5rem,4vw,5rem);opacity:0;visibility:hidden;transform:translateY(30px);transition:all .5s cubic-bezier(.4,0,.2,1);overflow-y:auto}
+.s.on{opacity:1;visibility:visible;transform:translateY(0)}
+.w{max-width:1100px;width:100%}
+h1{font-size:clamp(2.2rem,5vw,4.5rem);font-weight:900;line-height:1.05;letter-spacing:-.03em;margin-bottom:1.2rem}
+h2{font-size:clamp(1.6rem,3.2vw,2.8rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:1rem}
+h3{font-size:clamp(1rem,1.6vw,1.4rem);font-weight:700;margin-bottom:.6rem}
+p,.d{font-size:clamp(.9rem,1.2vw,1.15rem);line-height:1.6;color:var(--muted);max-width:700px}
+.gt{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ac{color:var(--accent)}.gn{color:var(--green)}.rd{color:var(--red)}.yl{color:var(--yellow)}.cn{color:var(--cyan)}.or{color:var(--orange)}
+.bn{font-size:clamp(3.5rem,9vw,8rem);font-weight:900;line-height:1;letter-spacing:-.04em}
+.mn{font-size:clamp(2rem,4vw,4rem);font-weight:900;line-height:1}
+.tg{display:inline-block;padding:.3rem .8rem;border-radius:100px;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;border:1px solid var(--border);color:var(--muted);margin-bottom:1rem}
+.tga{border-color:var(--accent);color:var(--accent)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.5rem}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem;margin-top:1.5rem}
+@media(max-width:768px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.c{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.4rem;transition:border-color .3s}
+.c:hover{border-color:var(--accent)}
+.c h3{font-size:1rem;margin-bottom:.4rem}
+.c p{font-size:.88rem;line-height:1.45}
+.c .cn_{font-size:2.2rem;font-weight:900;margin-bottom:.4rem}
+.br{margin-top:1.5rem;width:100%;max-width:650px}
+.br-r{display:flex;align-items:center;margin-bottom:.6rem;gap:.8rem}
+.br-l{min-width:170px;font-size:.85rem;font-weight:500;text-align:right}
+.br-t{flex:1;height:32px;background:var(--surface);border-radius:6px;overflow:hidden}
+.br-f{height:100%;border-radius:6px;display:flex;align-items:center;padding-left:10px;font-weight:700;font-size:.8rem;transition:width 1s cubic-bezier(.4,0,.2,1);width:0}
+.s.on .br-f{width:var(--w)}
+.q{font-size:clamp(1.1rem,1.8vw,1.7rem);font-weight:500;font-style:italic;line-height:1.5;color:var(--text);max-width:750px;padding-left:1.5rem;border-left:3px solid var(--accent)}
+.qa{margin-top:.8rem;font-size:.9rem;font-style:normal;color:var(--muted)}
+.st{display:flex;flex-direction:column;gap:.6rem;margin-top:1.2rem;counter-reset:s}
+.si{display:flex;align-items:flex-start;gap:1rem;padding:.9rem 1.2rem;background:var(--card);border-radius:10px;border:1px solid var(--border);counter-increment:s}
+.si::before{content:counter(s);min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;background:var(--accent);color:#fff;border-radius:8px;font-weight:800;font-size:.85rem;flex-shrink:0}
+.si h3{font-size:.95rem;margin-bottom:.15rem}
+.si p{font-size:.82rem;color:var(--muted);line-height:1.35}
+table{width:100%;border-collapse:separate;border-spacing:0;margin-top:1.2rem;font-size:.85rem}
+th{text-align:left;padding:.6rem .8rem;background:var(--card);color:var(--muted);font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--border)}
+th:first-child{border-radius:10px 0 0 0}th:last-child{border-radius:0 10px 0 0}
+td{padding:.6rem .8rem;border-bottom:1px solid var(--border);vertical-align:top}
+tr:last-child td{border-bottom:none}
+.hg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.8rem;margin-top:1.2rem}
+.hc{padding:1.1rem;border-radius:12px;border:1px solid var(--border);background:var(--card)}
+.hc .em{font-size:1.5rem;margin-bottom:.4rem}
+.hc h3{font-size:.9rem;margin-bottom:.2rem}
+.hc p{font-size:.8rem;color:var(--muted);line-height:1.35}
+.tl{position:relative;padding-left:2rem;margin-top:1.5rem}
+.tl::before{content:'';position:absolute;left:7px;top:0;bottom:0;width:2px;background:var(--border)}
+.ti{position:relative;margin-bottom:1.2rem;padding-left:1.2rem}
+.ti::before{content:'';position:absolute;left:-2rem;top:.3rem;width:16px;height:16px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.ti h3{font-size:.9rem;margin-bottom:.15rem}
+.ti .yr{font-size:.78rem;color:var(--accent);font-weight:700;margin-bottom:.15rem}
+.ti p{font-size:.82rem;color:var(--muted)}
+.sp{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
+@media(max-width:900px){.sp{grid-template-columns:1fr}}
+.nav{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:.8rem;z-index:100;background:rgba(17,17,24,.92);backdrop-filter:blur(16px);padding:.5rem 1rem;border-radius:100px;border:1px solid var(--border)}
+.nav button{width:36px;height:36px;border:none;background:var(--card);color:var(--text);border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:background .2s}
+.nav button:hover{background:var(--accent)}
+.nav .ct{font-size:.8rem;color:var(--muted);font-weight:500;min-width:55px;text-align:center}
+.pg{position:fixed;top:0;left:0;height:3px;background:var(--grad);z-index:200;transition:width .4s}
+.fu{opacity:0;transform:translateY(20px);transition:opacity .45s,transform .45s}
+.s.on .fu{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}.d4{transition-delay:.48s}
+.dl{position:fixed;top:1.2rem;right:1.2rem;z-index:200;padding:.55rem 1.2rem;background:var(--accent);color:#fff;border:none;border-radius:8px;font-weight:600;font-size:.8rem;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s}
+.dl:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(124,58,237,.4)}
+.ir{display:flex;gap:1.5rem;margin-top:1.2rem;flex-wrap:wrap}
+.ii{text-align:center}
+.ii .ic{font-size:1.8rem;margin-bottom:.3rem}
+.ii span{font-size:.72rem;color:var(--muted);display:block}
+</style>
+</head>
+<body>
+<div class="pg" id="pg"></div>
+<button class="dl" onclick="dl()">⬇ Скачать HTML</button>
+<div class="deck" id="dk">
+
+<!-- 1 TITLE -->
+<div class="s on" data-s="0"><div class="w" style="text-align:center">
+<div class="tg tga fu">Полное исследование · 2026</div>
+<h1 class="fu d1"><span class="gt">Анатомия</span><br>успешного стартапа</h1>
+<p class="fu d2" style="margin:0 auto 1.5rem">Как найти рынок, войти в него и создать продукт, который продаёт сам себя.<br>30+ исследований · 2 Нобелевских лауреата · 21 000+ стартапов · Тренды 2026.</p>
+<div class="ir fu d3" style="justify-content:center">
+<div class="ii"><div class="ic">🏛️</div><span>Harvard · MIT · Stanford<br>INSEAD · Wharton</span></div>
+<div class="ii"><div class="ic">🧬</div><span>Nature · PNAS<br>Frontiers</span></div>
+<div class="ii"><div class="ic">🏆</div><span>Kahneman · Thaler<br>Нобель 2002 · 2017</span></div>
+<div class="ii"><div class="ic">🚀</div><span>Y Combinator · Sequoia<br>CB Insights</span></div>
+</div>
+</div></div>
+
+<!-- 2 TIMING 42% -->
+<div class="s" data-s="1"><div class="w" style="text-align:center">
+<div class="tg fu">Bill Gross · Idealab · 200+ компаний</div>
+<h2 class="fu d1">Фактор успеха №1</h2>
+<div class="bn gt fu d2">42%</div>
+<h2 class="fu d3" style="margin-top:.4rem">Тайминг</h2>
+<p class="fu d4" style="margin:1rem auto 0">Единственный фактор, который нельзя «допилить». Если рынок не готов — ничто не поможет.</p>
+</div></div>
+
+<!-- 3 BAR CHART -->
+<div class="s" data-s="2"><div class="w">
+<div class="tg fu">Bill Gross · TED Talk</div>
+<h2 class="fu d1">5 факторов успеха стартапа</h2>
+<div class="br fu d2">
+<div class="br-r"><div class="br-l">Тайминг</div><div class="br-t"><div class="br-f" style="--w:84%;background:linear-gradient(90deg,#7c3aed,#c026d3)">42%</div></div></div>
+<div class="br-r"><div class="br-l">Команда</div><div class="br-t"><div class="br-f" style="--w:64%;background:linear-gradient(90deg,#3b82f6,#06b6d4)">32%</div></div></div>
+<div class="br-r"><div class="br-l">Идея</div><div class="br-t"><div class="br-f" style="--w:56%;background:linear-gradient(90deg,#ec4899,#f43f5e)">28%</div></div></div>
+<div class="br-r"><div class="br-l">Бизнес-модель</div><div class="br-t"><div class="br-f" style="--w:48%;background:linear-gradient(90deg,#22c55e,#10b981)">24%</div></div></div>
+<div class="br-r"><div class="br-l">Финансирование</div><div class="br-t"><div class="br-f" style="--w:28%;background:linear-gradient(90deg,#f97316,#eab308)">14%</div></div></div>
+</div>
+</div></div>
+
+<!-- 4 WHY FAIL -->
+<div class="s" data-s="3"><div class="w">
+<div class="tg fu">CB Insights · 483 post-mortem</div>
+<h2 class="fu d1">Почему стартапы <span class="rd">умирают</span></h2>
+<div class="g3 fu d2">
+<div class="c"><div class="cn_ rd">38%</div><h3>Кончились деньги</h3><p>Не привлекли раунд</p></div>
+<div class="c"><div class="cn_ rd">35%</div><h3>Никому не нужно</h3><p>Нет Product-Market Fit</p></div>
+<div class="c"><div class="cn_ yl">20%</div><h3>Проиграли конкурентам</h3><p>Не выделились</p></div>
+</div>
+<p class="fu d3" style="margin-top:1rem">Стартапы умирают от каскада 2–4 проблем, а не от одной ошибки.</p>
+</div></div>
+
+<!-- 5 HOW TO FIND MARKET — NEW -->
+<div class="s" data-s="4"><div class="w">
+<div class="tg tga fu">Новый раздел · Поиск рынка</div>
+<h2 class="fu d1">Как <span class="gt">найти рынок</span></h2>
+<div class="g2 fu d2">
+<div class="c" style="border-color:var(--accent)"><h3>🔬 Paul Graham (YC)</h3><p>Не ищи идеи — ищи <strong>проблемы</strong>. Лучшие идеи: ты сам хочешь это, можешь построить, мало кто видит ценность.</p></div>
+<div class="c" style="border-color:var(--cyan)"><h3>🎯 Steve Blank (Stanford)</h3><p><strong>Customer Discovery:</strong> выйди из офиса, проведи 50+ разговоров с клиентами. Гипотезы → интервью → pivot.</p></div>
+<div class="c" style="border-color:var(--green)"><h3>🔥 Sequoia Arc</h3><p>3 типа PMF:<br>• <strong>Hair on Fire</strong> — горит сейчас<br>• <strong>Hard Fact</strong> — привыкли к боли<br>• <strong>Future Vision</strong> — новый мир</p></div>
+<div class="c" style="border-color:var(--orange)"><h3>📋 JTBD (Harvard)</h3><p>Люди «нанимают» продукт для работы. Найди «работу», которую выполняют костылями.</p></div>
+</div>
+</div></div>
+
+<!-- 6 TAM SAM SOM -->
+<div class="s" data-s="5"><div class="w" style="text-align:center">
+<div class="tg fu">McKinsey · BCG · VC Standard</div>
+<h2 class="fu d1">Оценка размера рынка</h2>
+<div class="g3 fu d2">
+<div class="c" style="text-align:center;border-color:var(--accent)"><div class="mn ac">TAM</div><h3>Total Addressable Market</h3><p>Весь рынок, если 100% доля. Нужен $1B+ для Series A.</p></div>
+<div class="c" style="text-align:center;border-color:var(--cyan)"><div class="mn cn">SAM</div><h3>Serviceable Addressable</h3><p>Часть TAM, которую можешь обслужить текущим продуктом.</p></div>
+<div class="c" style="text-align:center;border-color:var(--green)"><div class="mn gn">SOM</div><h3>Serviceable Obtainable</h3><p>Реальная доля за 1–3 года. Цель: 3–5% SAM.</p></div>
+</div>
+<p class="fu d3" style="margin:1.2rem auto 0"><strong>Формула:</strong> Размер рынка = Количество клиентов × Средний чек. Используй Bottom-Up, не Top-Down.</p>
+</div></div>
+
+<!-- 7 HOW TO ENTER MARKET — NEW -->
+<div class="s" data-s="6"><div class="w">
+<div class="tg tga fu">Новый раздел · Вход в рынок</div>
+<h2 class="fu d1">Как <span class="gt">войти в рынок</span></h2>
+<h3 class="fu d1" style="color:var(--muted)">Wedge → Beachhead → Scale</h3>
+<div class="g3 fu d2">
+<div class="c" style="border-color:var(--orange)">
+<div class="cn_ or">30</div><h3>Дни 1–30: Wedge</h3>
+<p>1 боль · 1 покупатель · 1 решение. Результат за 7–14 дней. Найди 200+ потенциальных аккаунтов.</p>
+</div>
+<div class="c" style="border-color:var(--accent)">
+<div class="cn_ ac">60</div><h3>Дни 31–60: Beachhead</h3>
+<p>Захвати микронишу. 2–3 канала: founder outreach, партнёры, комьюнити. Первые 10 lighthouse-клиентов.</p>
+</div>
+<div class="c" style="border-color:var(--green)">
+<div class="cn_ gn">90</div><h3>Дни 61–90: Scale</h3>
+<p>«Bowling pin» модель: из одной ниши в смежные. Proof + momentum = расширение.</p>
+</div>
+</div>
+</div></div>
+
+<!-- 8 BEACHHEAD 3 CONDITIONS -->
+<div class="s" data-s="7"><div class="w">
+<div class="tg fu">MIT · Market Entry Research</div>
+<h2 class="fu d1">Beachhead: 3 обязательных условия</h2>
+<div class="st fu d2">
+<div class="si"><div><h3>Сарафанное радио</h3><p>Клиенты в сегменте общаются друг с другом. Есть сообщества и реферральные каналы.</p></div></div>
+<div class="si"><div><h3>Одинаковый процесс продаж</h3><p>Предсказуемые роли покупателя, размер сделки, каналы привлечения.</p></div></div>
+<div class="si"><div><h3>Один продукт</h3><p>Сегмент работает на коробочном решении без кастомизации.</p></div></div>
+</div>
+<p class="fu d3" style="margin-top:1rem"><strong>Правило:</strong> Те, кто кажутся «везде», сначала победили в одном месте и потом расширились последовательно.</p>
+</div></div>
+
+<!-- 9 CUSTOMER DEVELOPMENT -->
+<div class="s" data-s="8"><div class="w">
+<div class="tg fu">Steve Blank · Stanford · 10 000+ стартапов</div>
+<h2 class="fu d1">Customer Development: <span class="gt">4 шага</span></h2>
+<div class="st fu d2">
+<div class="si"><div><h3>Customer Discovery</h3><p>Тестируй гипотезы напрямую с клиентами. 50+ разговоров. Выйди из офиса.</p></div></div>
+<div class="si"><div><h3>Customer Validation</h3><p>Построй повторяемую модель продаж. Можешь ли продать второй раз так же?</p></div></div>
+<div class="si"><div><h3>Customer Creation</h3><p>Создай спрос и масштабируй каналы привлечения.</p></div></div>
+<div class="si"><div><h3>Company Building</h3><p>Из организации поиска → в организацию исполнения.</p></div></div>
+</div>
+<p class="fu d3" style="margin-top:1rem"><strong>Результат:</strong> NSF I-Corps команды привлекли $3.17B через 1 380 стартапов.</p>
+</div></div>
+
+<!-- 10 GTM 2026 -->
+<div class="s" data-s="9"><div class="w">
+<div class="tg tga fu">Go-to-Market · 2026</div>
+<h2 class="fu d1">GTM стратегия <span class="gt">2026</span></h2>
+<div class="g2 fu d2">
+<div class="c"><h3>❌ Старая модель</h3><p>Воронка продаж · Volume outbound · «Growth at all costs» · Лицензии на ПО</p></div>
+<div class="c" style="border-color:var(--green)"><h3>✅ Новая модель 2026</h3><p>Precision targeting · Proof of Intent · Value-first · Outcome as a Service (OaaS)</p></div>
+</div>
+<div class="g3 fu d3" style="margin-top:1rem">
+<div class="c"><h3>🎯 Precision</h3><p>Не «больше лидов», а точные сигналы intent</p></div>
+<div class="c"><h3>🤝 Trust-first</h3><p>Доверие и гарантия результата = валюта 2026</p></div>
+<div class="c"><h3>🏷️ OaaS</h3><p>Продавай результат, не подписку. Клиент платит за outcome.</p></div>
+</div>
+</div></div>
+
+<!-- 11 TRENDS 2026 -->
+<div class="s" data-s="10"><div class="w">
+<div class="tg tga fu">CB Insights · Sequoia · 2026</div>
+<h2 class="fu d1">Тренды <span class="gt">2026</span></h2>
+<div class="g2 fu d2">
+<div class="c" style="border-color:var(--accent)"><h3>🤖 AI Agents</h3><p>Рынок: $7.8B → $52.6B к 2030 (CAGR 41%). 33% всего VC-финансирования. Мультимодальные агенты: голос + текст + видео.</p></div>
+<div class="c" style="border-color:var(--cyan)"><h3>🏗️ Vertical AI</h3><p>Генерик-AI пузырь лопается. Побеждает глубокий вертикальный AI: юриспруденция, медицина, логистика.</p></div>
+<div class="c" style="border-color:var(--green)"><h3>👤 Solo AI Founders</h3><p>Основатели строят $10M ARR компании с 0 сотрудниками. AI-агенты заменяют отделы.</p></div>
+<div class="c" style="border-color:var(--orange)"><h3>📊 OaaS</h3><p>Outcome as a Service: продавай результат, не софт. Гарантия ROI = конкурентное преимущество.</p></div>
+</div>
+</div></div>
+
+<!-- 12 AI AGENTS DEEP DIVE -->
+<div class="s" data-s="11"><div class="w">
+<div class="tg fu">CB Insights · VC Funding 2026</div>
+<h2 class="fu d1">AI Agents: <span class="gt">$52.6B</span> к 2030</h2>
+<div class="g3 fu d2">
+<div class="c"><div class="cn_ ac">115+</div><h3>Customer Service AI</h3><p>Лидер рынка. Sierra: $100M ARR, $10B оценка. Voice-first архитектура.</p></div>
+<div class="c"><div class="cn_ gn">$5B</div><h3>Harvey AI (Legal)</h3><p>Вертикальный AI для юристов. Самый финансируемый vertical AI.</p></div>
+<div class="c"><div class="cn_ or">40%</div><h3>Бюджеты на агентов</h3><p>Предприятия тратят 40%+ AI-бюджетов на агентные системы.</p></div>
+</div>
+<p class="fu d3" style="margin-top:1rem"><strong>Куда смотрят VC:</strong> Orchestration layers, Agent observability, Enterprise deployment infrastructure.</p>
+</div></div>
+
+<!-- 13 SEQUOIA ARC PMF -->
+<div class="s" data-s="12"><div class="w">
+<div class="tg fu">Sequoia Capital · Arc Program</div>
+<h2 class="fu d1">3 типа <span class="gt">Product-Market Fit</span></h2>
+<div class="g3 fu d2">
+<div class="c" style="border-color:var(--red)">
+<div style="font-size:2rem;margin-bottom:.4rem">🔥</div>
+<h3>Hair on Fire</h3>
+<p>Срочная проблема в конкурентном рынке. Нужно быть <strong>10x лучше</strong>.</p>
+</div>
+<div class="c" style="border-color:var(--yellow)">
+<div style="font-size:2rem;margin-bottom:.4rem">🪨</div>
+<h3>Hard Fact</h3>
+<p>Проблема, с которой <strong>смирились</strong>. Нужно сломать инерцию привычки.</p>
+</div>
+<div class="c" style="border-color:var(--accent)">
+<div style="font-size:2rem;margin-bottom:.4rem">🔮</div>
+<h3>Future Vision</h3>
+<p>Новая парадигма (как iPhone). Долгий путь, но <strong>огромный upside</strong>.</p>
+</div>
+</div>
+<p class="fu d3" style="margin-top:1rem"><strong>40% Test (Sean Ellis):</strong> ≥40% пользователей «очень расстроены» без продукта = PMF достигнут.</p>
+</div></div>
+
+<!-- 14 SYSTEM 1/2 -->
+<div class="s" data-s="13"><div class="w" style="text-align:center">
+<div class="tg fu">Daniel Kahneman · Нобель 2002</div>
+<h2 class="fu d1"><span class="gt">95%</span> решений — эмоциональные</h2>
+<div class="sp fu d2" style="margin-top:1.5rem">
+<div class="c" style="text-align:center"><div class="cn_ ac">Система 1</div><h3>Быстрая · Автоматическая</h3><p style="font-size:2rem;margin:.5rem 0">⚡</p><p>17 мс · Интуиция · Эмоции<br><strong>Принимает решение</strong></p></div>
+<div class="c" style="text-align:center"><div class="cn_" style="color:var(--muted)">Система 2</div><h3>Медленная · Логическая</h3><p style="font-size:2rem;margin:.5rem 0">🧠</p><p>Секунды–минуты · Анализ<br><strong>Оправдывает</strong> решение Системы 1</p></div>
+</div>
+</div></div>
+
+<!-- 15 LOSS AVERSION -->
+<div class="s" data-s="14"><div class="w" style="text-align:center">
+<div class="tg fu">Kahneman & Tversky</div>
+<h2 class="fu d1">Потеря болит в</h2>
+<div class="bn fu d2" style="color:var(--red)">2.5x</div>
+<h2 class="fu d3">сильнее выигрыша</h2>
+<p class="fu d4" style="margin:1rem auto 0">«Вы теряете X каждый день» → всегда сильнее, чем «Вы получите X».</p>
+</div></div>
+
+<!-- 16 HORMONES -->
+<div class="s" data-s="15"><div class="w">
+<div class="tg fu">Nature · Frontiers · PNAS</div>
+<h2 class="fu d1">Гормональная карта <span class="gt">решений</span></h2>
+<div class="hg fu d2">
+<div class="hc"><div class="em">🟣</div><h3>Дофамин</h3><p>Желание, ожидание, «хочу ещё»</p></div>
+<div class="hc"><div class="em">🩷</div><h3>Окситоцин</h3><p>Доверие, привязанность, лояльность</p></div>
+<div class="hc"><div class="em">🟡</div><h3>Серотонин</h3><p>Статус, уверенность, «я крутой»</p></div>
+<div class="hc"><div class="em">🔴</div><h3>Кортизол</h3><p>Страх потери, FOMO</p></div>
+<div class="hc"><div class="em">🟢</div><h3>Эндорфины</h3><p>Облегчение, радость</p></div>
+<div class="hc"><div class="em">🟠</div><h3>Тестостерон</h3><p>Риск, конкуренция, амбиции</p></div>
+</div>
+<p class="fu d3" style="margin-top:1rem"><strong>Nature 2024:</strong> Доверие (окситоцин) усиливает дофамин. Доверие = мультипликатор всех гормонов.</p>
+</div></div>
+
+<!-- 17 DOSE -->
+<div class="s" data-s="16"><div class="w" style="text-align:center">
+<div class="tg tga fu">DOSE · Nature 2024</div>
+<h2 class="fu d1">Формула <span class="gt">удержания</span></h2>
+<div class="g4 fu d2" style="margin-top:2rem">
+<div class="c" style="text-align:center;border-color:var(--accent)"><div class="mn ac">D</div><h3>Dopamine</h3><p>Прогресс · Награда</p></div>
+<div class="c" style="text-align:center;border-color:#ec4899"><div class="mn" style="color:#ec4899">O</div><h3>Oxytocin</h3><p>Доверие · Связь</p></div>
+<div class="c" style="text-align:center;border-color:var(--yellow)"><div class="mn yl">S</div><h3>Serotonin</h3><p>Статус · Признание</p></div>
+<div class="c" style="text-align:center;border-color:var(--green)"><div class="mn gn">E</div><h3>Endorphins</h3><p>Радость · Облегчение</p></div>
+</div>
+</div></div>
+
+<!-- 18 CIALDINI -->
+<div class="s" data-s="17"><div class="w">
+<div class="tg fu">Robert Cialdini · 7M+ книг</div>
+<h2 class="fu d1">7 принципов <span class="gt">влияния</span></h2>
+<div class="g4 fu d2" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr))">
+<div class="c"><h3>🎁 Взаимность</h3><p>Дал бесплатно → лояльность</p></div>
+<div class="c"><h3>⏳ Дефицит</h3><p>Меньше = ценнее</p></div>
+<div class="c"><h3>👨‍🔬 Авторитет</h3><p>Эксперт = доверие</p></div>
+<div class="c"><h3>🔗 Последовательность</h3><p>Малый шаг → большой</p></div>
+<div class="c"><h3>😊 Симпатия</h3><p>Нравишься → соглашусь</p></div>
+<div class="c"><h3>👥 Соц. proof</h3><p>Другие делают = ОК</p></div>
+<div class="c"><h3>🤝 Единство</h3><p>«Мы» = макс. доверие</p></div>
+</div>
+</div></div>
+
+<!-- 19 HOOK -->
+<div class="s" data-s="18"><div class="w" style="text-align:center">
+<div class="tg fu">Nir Eyal + BJ Fogg + Csikszentmihalyi</div>
+<h2 class="fu d1">Цикл <span class="gt">привычки</span></h2>
+<div class="g4 fu d2">
+<div class="c" style="text-align:center"><div style="font-size:2rem;margin-bottom:.3rem">🔔</div><h3>Триггер</h3><p>Push → скука → FOMO</p></div>
+<div class="c" style="text-align:center"><div style="font-size:2rem;margin-bottom:.3rem">👆</div><h3>Действие</h3><p>B=MAP (Fogg)</p></div>
+<div class="c" style="text-align:center"><div style="font-size:2rem;margin-bottom:.3rem">🎰</div><h3>Награда</h3><p>Дофамин + Flow</p></div>
+<div class="c" style="text-align:center"><div style="font-size:2rem;margin-bottom:.3rem">💎</div><h3>Инвестиция</h3><p>IKEA effect (+63%)</p></div>
+</div>
+<p class="fu d3" style="margin-top:1rem">Цель: <strong>внутренний триггер</strong> — «мне скучно» → открывает продукт БЕЗ рекламы.</p>
+</div></div>
+
+<!-- 20 CROSSING CHASM -->
+<div class="s" data-s="19"><div class="w">
+<div class="tg fu">Geoffrey Moore · Crossing the Chasm</div>
+<h2 class="fu d1">Самый опасный момент: <span class="rd">Пропасть</span></h2>
+<div class="g2 fu d2" style="align-items:start">
+<div>
+<div style="display:flex;gap:3px;align-items:end;height:140px;margin-bottom:.8rem">
+<div style="width:12%;height:25%;background:var(--accent);border-radius:5px 5px 0 0;opacity:.6"></div>
+<div style="width:18%;height:55%;background:var(--accent);border-radius:5px 5px 0 0;opacity:.8"></div>
+<div style="width:4%;height:10%;background:var(--red);border-radius:5px 5px 0 0"></div>
+<div style="width:30%;height:100%;background:var(--green);border-radius:5px 5px 0 0;opacity:.9"></div>
+<div style="width:30%;height:80%;background:var(--green);border-radius:5px 5px 0 0;opacity:.6"></div>
+<div style="width:12%;height:30%;background:var(--muted);border-radius:5px 5px 0 0;opacity:.4"></div>
+</div>
+<div style="display:flex;gap:3px;font-size:.65rem;color:var(--muted)">
+<div style="width:12%;text-align:center">Новаторы 2.5%</div>
+<div style="width:18%;text-align:center">Ранние 13.5%</div>
+<div style="width:4%;text-align:center;color:var(--red);font-weight:700">!</div>
+<div style="width:30%;text-align:center">Раннее больш. 34%</div>
+<div style="width:30%;text-align:center">Позднее 34%</div>
+<div style="width:12%;text-align:center">16%</div>
+</div>
+</div>
+<div>
+<div class="c" style="margin-bottom:.8rem;border-color:var(--red)"><h3 style="color:var(--red)">Почему?</h3><p>Фанаты покупают видение. Прагматики покупают доказательство. 100 фанатов НЕ убедят прагматика.</p></div>
+<div class="c" style="border-color:var(--green)"><h3 style="color:var(--green)">Как пересечь</h3><p>1 сегмент → полный продукт → лидерство в нише → расширение.</p></div>
+</div>
+</div>
+</div></div>
+
+<!-- 21 NETWORK EFFECTS -->
+<div class="s" data-s="20"><div class="w">
+<div class="tg fu">Metcalfe · Reed · Odlyzko</div>
+<h2 class="fu d1">Математика <span class="gt">сетевых эффектов</span></h2>
+<div class="g3 fu d2">
+<div class="c" style="text-align:center"><div class="cn_" style="color:var(--muted)">V = N</div><h3>Sarnoff</h3><p>Линейный (ТВ)</p></div>
+<div class="c" style="text-align:center;border-color:var(--accent)"><div class="cn_ ac">V = N²</div><h3>Metcalfe</h3><p>Квадратичный (мессенджер)</p></div>
+<div class="c" style="text-align:center;border-color:var(--accent2)"><div class="cn_" style="color:var(--accent2)">V = 2ᴺ</div><h3>Reed</h3><p>Экспонент (группы, каналы)</p></div>
+</div>
+</div></div>
+
+<!-- 22 TELEGRAM -->
+<div class="s" data-s="21"><div class="w">
+<div class="tg tga fu">Кейс · Павел Дуров</div>
+<h2 class="fu d1"><span class="gt">Telegram</span> · 0 → 900M+</h2>
+<div class="sp fu d2">
+<div class="tl">
+<div class="ti"><div class="yr">2013</div><h3>Запуск</h3><p>Пост-Сноуден. Идеальный тайминг.</p></div>
+<div class="ti"><div class="yr">2014</div><h3>10M скачиваний</h3><p>Сетевой эффект запущен.</p></div>
+<div class="ti"><div class="yr">2016</div><h3>100M MAU</h3><p>«Zero marketing budget»</p></div>
+<div class="ti"><div class="yr">2018</div><h3>Блокировка РФ</h3><p>Антихрупкость: рост мировой аудитории</p></div>
+<div class="ti"><div class="yr">2024</div><h3>900M+ MAU</h3><p>Платформа: каналы, боты, платежи</p></div>
+</div>
+<div>
+<div class="c" style="margin-bottom:.7rem"><h3>🔑 Секрет</h3><p>Бесплатный, приватный, без рекламы</p></div>
+<div class="c" style="margin-bottom:.7rem"><h3>⏱️ Тайминг</h3><p>Сноуден + продажа WhatsApp</p></div>
+<div class="c" style="margin-bottom:.7rem"><h3>🌊 Blue Ocean</h3><p>Новая категория: мессенджер-платформа</p></div>
+<div class="c"><h3>💪 Grit</h3><p>10+ лет без прибыли</p></div>
+</div>
+</div>
+</div></div>
+
+<!-- 23 14 STEPS 1-7 -->
+<div class="s" data-s="22"><div class="w">
+<h2 class="fu">Шаги 1–7: <span class="ac">Найти рынок и войти</span></h2>
+<div class="st fu d1">
+<div class="si"><div><h3>Найди проблему, не идею</h3><p>Что люди ненавидят? JTBD? — Paul Graham, Christensen</p></div></div>
+<div class="si"><div><h3>Начни с WHY</h3><p>Зачем ты это делаешь? Лимбический мозг — Sinek</p></div></div>
+<div class="si"><div><h3>Проверь тайминг</h3><p>Мир готов? Технологический сдвиг? — Gross, 42%</p></div></div>
+<div class="si"><div><h3>Оцени рынок: TAM→SAM→SOM</h3><p>Bottom-up. $1B+ TAM для Series A — McKinsey</p></div></div>
+<div class="si"><div><h3>Customer Discovery</h3><p>50+ разговоров. Выйди из офиса — Steve Blank</p></div></div>
+<div class="si"><div><h3>Wedge + Beachhead</h3><p>1 боль · 1 покупатель · 200+ аккаунтов · 90 дней</p></div></div>
+<div class="si"><div><h3>MVP → Итерируй</h3><p>Build-Measure-Learn. Sean Ellis Test ≥40% — Ries</p></div></div>
+</div>
+</div></div>
+
+<!-- 24 14 STEPS 8-14 -->
+<div class="s" data-s="23"><div class="w">
+<h2 class="fu">Шаги 8–14: <span class="gt">Расти и защищай</span></h2>
+<div class="st fu d1">
+<div class="si"><div><h3>Пересеки Пропасть</h3><p>1 сегмент прагматиков → полный продукт → лидер ниши — Moore</p></div></div>
+<div class="si"><div><h3>Встрой вирусность</h3><p>5 типов PLG + Reed's Law. Продукт = канал роста</p></div></div>
+<div class="si"><div><h3>Создай привычку</h3><p>Hook + Flow + B=MAP + IKEA effect — Eyal, Fogg</p></div></div>
+<div class="si"><div><h3>Построй MOAT</h3><p>Сеть, данные, бренд, switching costs — Thiel</p></div></div>
+<div class="si"><div><h3>GTM 2026: OaaS</h3><p>Outcome as a Service. Продавай результат — не подписку</p></div></div>
+<div class="si"><div><h3>Масштабируй правильно</h3><p>Только после PMF. CAC < LTV — Harvard</p></div></div>
+<div class="si"><div><h3>Антихрупкость</h3><p>80% безопасность + 20% эксперименты с upside — Taleb</p></div></div>
+</div>
+</div></div>
+
+<!-- 25 FINAL -->
+<div class="s" data-s="24"><div class="w" style="text-align:center">
+<div class="tg tga fu">Итог · 2026</div>
+<h1 class="fu d1"><span class="gt">Скорость обучения —<br>единственная гарантия</span></h1>
+<p class="fu d2" style="margin:1rem auto 0;font-size:1.1rem">14 шагов · 30+ исследований · 2 Нобелевских лауреата · 21 000+ стартапов</p>
+<div class="g3 fu d3" style="margin-top:2rem;max-width:700px;margin-left:auto;margin-right:auto">
+<div style="text-align:center"><div style="font-size:2rem">🔍</div><p style="margin-top:.4rem;font-size:.85rem">Найди рынок<br>Customer Discovery</p></div>
+<div style="text-align:center"><div style="font-size:2rem">⚡</div><p style="margin-top:.4rem;font-size:.85rem">Войди через Wedge<br>Beachhead → Scale</p></div>
+<div style="text-align:center"><div style="font-size:2rem">🛡️</div><p style="margin-top:.4rem;font-size:.85rem">Построй MOAT<br>Стань антихрупким</p></div>
+</div>
+<p class="fu d4" style="margin-top:2rem;color:var(--muted);font-size:.8rem">Harvard · MIT · Stanford · INSEAD · Oxford · Princeton · Chicago · NYU<br>Nature · PNAS · CB Insights · Y Combinator · Sequoia · McKinsey · BCG</p>
+</div></div>
+
+</div>
+
+<div class="nav">
+<button onclick="pv()" aria-label="Prev">←</button>
+<div class="ct"><span id="cr">1</span> / <span id="tt"></span></div>
+<button onclick="nx()" aria-label="Next">→</button>
+</div>
+
+<script>
+const ss=document.querySelectorAll('.s'),tot=ss.length;let cur=0;
+document.getElementById('tt').textContent=tot;
+function go(n){if(n<0||n>=tot)return;ss[cur].classList.remove('on');cur=n;ss[cur].classList.add('on');document.getElementById('cr').textContent=cur+1;document.getElementById('pg').style.width=((cur+1)/tot*100)+'%'}
+function nx(){go(cur+1)}function pv(){go(cur-1)}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' ')nx();if(e.key==='ArrowLeft')pv()});
+let tx=0;document.addEventListener('touchstart',e=>{tx=e.changedTouches[0].screenX});
+document.addEventListener('touchend',e=>{const d=e.changedTouches[0].screenX-tx;if(Math.abs(d)>50){d<0?nx():pv()}});
+go(0);
+function dl(){const h=document.documentElement.outerHTML;const b=new Blob(['<!DOCTYPE html>'+h],{type:'text/html'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='startup-research-2026.html';a.click();URL.revokeObjectURL(a.href)}
+</script>
+</body>
+</html>
