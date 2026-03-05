@@ -2,10 +2,5 @@
 
 ## Cursor Cloud specific instructions
 
-Облачной агент запускается в окружении, заданном в `.cursor/environment.json`:
-- Перед стартом выполняется `npm install` (идемпотентно).
-- Репозиторий: `russkih75-ctrl/servis`. Рабочая ветка по умолчанию — `master`.
-
-При необходимости делай коммиты и push в этот репозиторий. Секреты и переменные окружения задаются в cursor.com (Dashboard → Cloud Agents → Secrets), не храни их в коде.
-
-Для статического контента (HTML/CSS/JS) достаточно открыть `index.html` в браузере или поднять простой сервер (`npx serve .` при необходимости).
+- **Update script** (`npm install`) runs automatically on VM startup.
+- Repo: `russkih75-ctrl/servis`. Default branch: `master`.
